@@ -1,0 +1,14 @@
+# --- Build Outputs ---
+bin/
+obj/
+build/
+
+# --- Visual Studio ---
+.vs/
+
+# --- VS Code ---
+.vscode/
+
+# --- Logs / temp ---
+*.log
+*.tmp
