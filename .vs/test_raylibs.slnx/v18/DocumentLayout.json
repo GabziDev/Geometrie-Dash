@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\test_raylibs\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6EF7CB2-CC58-4F2C-9C79-B1BA85676BAA}|test_raylibs.csproj|c:\\users\\admin\\source\\repos\\test_raylibs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6EF7CB2-CC58-4F2C-9C79-B1BA85676BAA}|test_raylibs.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\obstactle\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:obstactle\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Block.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\Block.cs",
+              "RelativeDocumentMoniker": "Obstactle\\Block.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\Block.cs",
+              "RelativeToolTip": "Obstactle\\Block.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T09:35:20.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Player.cs",
+              "RelativeDocumentMoniker": "Player.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Player.cs",
+              "RelativeToolTip": "Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T09:29:04.581Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\test_raylibs\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\test_raylibs\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAgwFYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-20T07:44:44.411Z",
               "EditorCaption": ""

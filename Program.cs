@@ -1,5 +1,7 @@
 ﻿using Raylib_cs;
 using System.Numerics;
+using test_raylibs;
+using test_raylibs.Obstactle;
 
 class Program
 {
@@ -9,8 +11,9 @@ class Program
         Raylib.InitWindow(800, 600, "Géometrie dash");
         Raylib.SetTargetFPS(60);
 
-        int playerX = 460;
-        int playerY = 100;
+        float playerX = 100;
+        float playerY = 460;
+        
 
         int camera = 0;
         int attemps = 0;
@@ -18,35 +21,85 @@ class Program
         int screenWitdh = Raylib.GetScreenWidth();                     
         int screenHeight = Raylib.GetScreenHeight();
 
+        Scene scene = Scene.LevelDebug;
 
-        Console.WriteLine("The windows do " + screenHeight + " + " + screenHeight);
+        Player player = new Player();
+        player.Position = new Vector2(100, 460);
+
+        //init level items
+        List<Block> blocks = new List<Block>()
+        {
+            new Block(500, 460),
+            new Block(540, 460),
+            new Block(540, 420)
+        };
 
         //loop
         while (!Raylib.WindowShouldClose())
         {
-            camera += 5;
+            float dt = Raylib.GetFrameTime();
 
-            // Update (logique)
-            if (Raylib.IsKeyDown(KeyboardKey.W))
+            //UPDATE
+            camera += 5;
+            player.Update(dt);
+
+            foreach (var block in blocks)
             {
-                playerY += 10;
+                if (Raylib.CheckCollisionRecs(player.GetRect(), block.GetRect(camera)))
+                {
+                    Console.WriteLine("Cllisomn");
+                }
             }
 
-            // Draw (affichage)
+            /*
+            switch (scene)
+            {
+                case Scene.Menu:
+                    DrawSceneMenu();
+                    break;
+                case Scene.LevelDebug:
+                    DrawnLevelDebug(camera);
+                    drawPlayer(playerX, playerY);
+                    break;
+            }
+            */
+
+
+            //DRAW
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Color.White);
+            foreach (var block in blocks)
+            {
+                block.Draw(camera);
+            }
 
-            Raylib.DrawText("Géometrie dash", screenWitdh /2 - camera, screenHeight / 4, 40, Color.Black);
-            Raylib.DrawText("Attemps : " + attemps, screenWitdh / 2 - camera, screenHeight / 4 + 50, 20, Color.Black);
-
-            //dessiner des element
+            player.Draw();
             DrawGround();
-            drawPlayer(playerY, playerX);
-            drawLevel1(camera);
 
             Raylib.EndDrawing();
         }
-        
+
+        // ----- Scene ----- //
+
+        //menu
+        void DrawSceneMenu()
+        {
+            Raylib.DrawText("Géometrie dash", screenWitdh / 4, screenHeight / 4, 40, Color.Black);
+
+            //Raylib.DrawRectangle()
+        }
+
+        void DrawnLevelDebug(int camera)
+        {
+            Raylib.DrawText("Géometrie dash", screenWitdh / 2 - camera, screenHeight / 4, 40, Color.Black);
+            Raylib.DrawText("Attemps : " + attemps, screenWitdh / 2 - camera, screenHeight / 4 + 50, 20, Color.Black);
+
+            Raylib.DrawRectangle(500 - camera, 460, 40, 40, Color.Blue);
+            Raylib.DrawRectangle(540 - camera, 460, 40, 40, Color.Blue);
+            Raylib.DrawRectangle(540 - camera, 420, 40, 40, Color.Blue);
+        }
+
+
         // ----- Element ----- //
 
         //sol
@@ -58,31 +111,20 @@ class Program
             Raylib.DrawRectangle(0, groundY, screenWitdh, 4, Color.Black);
         }
 
-        //player
-        void drawPlayer(int x, int y)
-        {
-            Raylib.DrawRectangle(x, y, 40, 40, Color.Blue);
-        }
-
-        //level
-        void drawLevel1(int camera)
-        {
-            Raylib.DrawRectangle(500 - camera, 460, 40, 40, Color.Blue);
-            Raylib.DrawRectangle(540 - camera, 460, 40, 40, Color.Blue);
-            Raylib.DrawRectangle(540 - camera, 420, 40, 40, Color.Blue);
-        }
 
         //prefabs
         void drawCube(int x, int y, Color c)
         {
-            Raylib.DrawRectangle(x, y, 40, 40, c);
+            Raylib.DrawRectangle(x, y, 40, 40, Color.Black);
         }
-            
-
-
-
-
 
         Raylib.CloseWindow();
+    }
+
+    enum Scene
+    {
+        Menu,
+        LevelDebug,
+        Level_1
     }
 }
