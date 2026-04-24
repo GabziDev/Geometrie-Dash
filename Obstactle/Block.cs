@@ -18,7 +18,8 @@ namespace test_raylibs.Obstactle
         {
             Raylib.DrawRectangle((int)Rect.X - camera, (int)Rect.Y + 2, 40, 40, Color.White);
             Raylib.DrawRectangle((int)Rect.X - camera, (int)Rect.Y+2, 38, 38, Color.Black);
-            Raylib.DrawRectangleGradientV((int)Rect.X - camera, (int)Rect.Y, 38, 38, Color.Black, Color.Magenta);
+            Raylib.DrawRectangle((int)Rect.X - camera, (int)Rect.Y+2, 38, 38, Color.Black);
+            Raylib.DrawRectangle((int)Rect.X - camera, (int)Rect.Y, 80, 80, Color.Black);
         }
 
         public Rectangle GetRect(int camera)

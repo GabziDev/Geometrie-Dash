@@ -19,6 +19,11 @@ namespace test_raylibs
             return new Rectangle (Position.X, Position.Y, Seize, Seize);
         }
 
+        public Rectangle GetDeathZone()
+        {
+            return new Rectangle(Position.X + 8, Position.Y + 2, 35, 35);
+        }
+
         public void Update(float dt)
         {
             float groundY = 460;
@@ -31,11 +36,11 @@ namespace test_raylibs
             {
                 Position.Y = groundY;
                 Velocity.Y = 0;
-                isGrounded = false;
+                isGrounded = true;
             }
             else
             {
-                isGrounded = true;
+                isGrounded = false;
             }
 
             if (Raylib.IsKeyDown(KeyboardKey.Space) && !isGrounded)
@@ -47,6 +52,7 @@ namespace test_raylibs
         public void Draw()
         {
             Raylib.DrawRectangle((int)Position.X, (int)Position.Y, 40, 40, Color.Blue);
+            Raylib.DrawRectangle((int)Position.X + 8, (int)Position.Y + 2, 35, 35, Color.Red);
         }
     }
 }

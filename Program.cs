@@ -21,7 +21,7 @@ class Program
         int screenWitdh = Raylib.GetScreenWidth();                     
         int screenHeight = Raylib.GetScreenHeight();
 
-        Scene scene = Scene.LevelDebug;
+        Scene scene = Scene.Menu;
 
         Player player = new Player();
         player.Position = new Vector2(100, 460);
@@ -33,6 +33,10 @@ class Program
             new Block(540, 460),
             new Block(540, 420)
         };
+
+        //btn play
+        Rectangle playButton = new Rectangle(360, screenHeight / 2, 80, 80);
+        bool hover;
 
         //loop
         while (!Raylib.WindowShouldClose())
@@ -48,10 +52,34 @@ class Program
                 if (Raylib.CheckCollisionRecs(player.GetRect(), block.GetRect(camera)))
                 {
                     Console.WriteLine("Cllisomn");
+                    player.Position = new Vector2(100, 400);
+                }
+
+                if (Raylib.CheckCollisionRecs(player.GetDeathZone(), block.GetRect(camera)))
+                {
+                    Console.WriteLine("Mort");
+                    //tuer le joueur
+                    attemps ++;
+                    player.Position = new Vector2(100, 460);
+                    camera = 0;
                 }
             }
 
-            /*
+            //logic menu
+            Vector2 mouse = Raylib.GetMousePosition();
+
+            hover = Raylib.CheckCollisionPointRec(mouse, playButton);
+
+            if (hover && Raylib.IsMouseButtonPressed(MouseButton.Left))
+            {
+                scene = Scene.LevelDebug;
+            }
+
+
+            //DRAW
+            Raylib.BeginDrawing();
+            Raylib.ClearBackground(Color.White);
+
             switch (scene)
             {
                 case Scene.Menu:
@@ -59,21 +87,14 @@ class Program
                     break;
                 case Scene.LevelDebug:
                     DrawnLevelDebug(camera);
-                    drawPlayer(playerX, playerY);
+                    foreach (var block in blocks)
+                    {
+                        block.Draw(camera);
+                    }
+                    player.Draw();
                     break;
             }
-            */
 
-
-            //DRAW
-            Raylib.BeginDrawing();
-            Raylib.ClearBackground(Color.White);
-            foreach (var block in blocks)
-            {
-                block.Draw(camera);
-            }
-
-            player.Draw();
             DrawGround();
 
             Raylib.EndDrawing();
@@ -86,7 +107,22 @@ class Program
         {
             Raylib.DrawText("Géometrie dash", screenWitdh / 4, screenHeight / 4, 40, Color.Black);
 
-            //Raylib.DrawRectangle()
+            // boutons décoratifs (optionnel)
+            Raylib.DrawRectangle(260, screenHeight / 2, 80, 80, Color.Blue);
+            Raylib.DrawRectangle(360, screenHeight / 2, 80, 80, Color.Blue);
+            Raylib.DrawRectangle(460, screenHeight / 2, 80, 80, Color.Blue);
+
+            // bouton play
+            Color color = Color.Blue;
+
+            Raylib.DrawRectangleRec(playButton, color);
+
+            Raylib.DrawTriangle(
+                new Vector2(playButton.X + 20, playButton.Y + 20),
+                new Vector2(playButton.X + 20, playButton.Y + 60),
+                new Vector2(playButton.X + 60, playButton.Y + 40),
+                Color.White
+            );
         }
 
         void DrawnLevelDebug(int camera)
