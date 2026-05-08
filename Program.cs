@@ -8,18 +8,25 @@ class Program
     static void Main()
     {
         //init
-        Raylib.InitWindow(800, 600, "Géometrie dash");
+
+        int display = Raylib.GetCurrentMonitor();
+
+        //int screenWitdh = Raylib.GetMonitorWidth(display);
+        //int screenHeight = Raylib.GetMonitorHeight(display);
+
+        int screenWitdh = 1920;
+        int screenHeight = 1080;
+
+
+        Raylib.InitWindow(screenWitdh, screenHeight, "Géometrie dash");
+        Console.WriteLine("L'écran fais " + screenWitdh + " X " + screenHeight);
         Raylib.SetTargetFPS(60);
 
         float playerX = 100;
         float playerY = 460;
         
-
         int camera = 0;
         int attemps = 0;
-
-        int screenWitdh = Raylib.GetScreenWidth();                     
-        int screenHeight = Raylib.GetScreenHeight();
 
         Scene scene = Scene.Menu;
 
@@ -29,9 +36,10 @@ class Program
         //init level items
         List<Block> blocks = new List<Block>()
         {
-            new Block(500, 460),
-            new Block(540, 460),
-            new Block(540, 420)
+            new SquareBlock(500, 730),
+            new SquareBlock(580, 730),
+            new SquareBlock(580, 650),
+            new Spike(900, 730)
         };
 
         //btn play
@@ -44,24 +52,43 @@ class Program
             float dt = Raylib.GetFrameTime();
 
             //UPDATE
-            camera += 5;
-            player.Update(dt);
+            if (scene != Scene.Menu)
+            {
+                camera += 5;
+                player.Update(dt);
+            }
+
+            player.isGrounded = false;
+
 
             foreach (var block in blocks)
             {
                 if (Raylib.CheckCollisionRecs(player.GetRect(), block.GetRect(camera)))
                 {
                     Console.WriteLine("Cllisomn");
-                    player.Position = new Vector2(100, 400);
+                    //  player.Position = new Vector2(100, 730);
                 }
 
                 if (Raylib.CheckCollisionRecs(player.GetDeathZone(), block.GetRect(camera)))
                 {
                     Console.WriteLine("Mort");
-                    //tuer le joueur
-                    attemps ++;
-                    player.Position = new Vector2(100, 460);
+                    attemps++;
+                    player.Position = new Vector2(100, 730);
                     camera = 0;
+                }
+
+                Rectangle blockRect = block.GetRect(camera);
+
+                if (Raylib.CheckCollisionRecs(player.GetRect(), blockRect))
+                {
+                    if (player.Velocity.Y < 0)
+                    {
+                        player.Position.Y = blockRect.Y - player.GetRect().Height;
+
+                        player.Velocity.Y = 0;
+
+                        player.isGrounded = true;
+                    }
                 }
             }
 
@@ -107,10 +134,12 @@ class Program
         {
             Raylib.DrawText("Géometrie dash", screenWitdh / 4, screenHeight / 4, 40, Color.Black);
 
-            // boutons décoratifs (optionnel)
-            Raylib.DrawRectangle(260, screenHeight / 2, 80, 80, Color.Blue);
-            Raylib.DrawRectangle(360, screenHeight / 2, 80, 80, Color.Blue);
-            Raylib.DrawRectangle(460, screenHeight / 2, 80, 80, Color.Blue);
+            int y = screenHeight / 2;
+
+            // 3 boutons centrés "à la main"
+            Raylib.DrawRectangle(360, y, 80, 80, Color.Blue);
+            Raylib.DrawRectangle(600, y, 80, 80, Color.Blue);
+            Raylib.DrawRectangle(840, y, 80, 80, Color.Blue);
 
             // bouton play
             Color color = Color.Blue;
@@ -129,10 +158,6 @@ class Program
         {
             Raylib.DrawText("Géometrie dash", screenWitdh / 2 - camera, screenHeight / 4, 40, Color.Black);
             Raylib.DrawText("Attemps : " + attemps, screenWitdh / 2 - camera, screenHeight / 4 + 50, 20, Color.Black);
-
-            Raylib.DrawRectangle(500 - camera, 460, 40, 40, Color.Blue);
-            Raylib.DrawRectangle(540 - camera, 460, 40, 40, Color.Blue);
-            Raylib.DrawRectangle(540 - camera, 420, 40, 40, Color.Blue);
         }
 
 
@@ -141,17 +166,10 @@ class Program
         //sol
         void DrawGround()
         {
-            int groundY = screenHeight - 100;
+            int groundY = screenHeight * 3 / 4;
 
-            Raylib.DrawRectangle(0, groundY, screenWitdh, 100, Color.Red);
+            Raylib.DrawRectangle(0, groundY, screenWitdh, 300, Color.Red);
             Raylib.DrawRectangle(0, groundY, screenWitdh, 4, Color.Black);
-        }
-
-
-        //prefabs
-        void drawCube(int x, int y, Color c)
-        {
-            Raylib.DrawRectangle(x, y, 40, 40, Color.Black);
         }
 
         Raylib.CloseWindow();
@@ -164,3 +182,5 @@ class Program
         Level_1
     }
 }
+
+

@@ -5,22 +5,16 @@ using System.Text;
 
 namespace test_raylibs.Obstactle
 {
-    internal class Block
+    internal abstract class Block
     {
         public Rectangle Rect;
 
-        public Block(float x, float y)
+        public Block(float x, float y, float w, float h)
         {
-            Rect = new Rectangle((int)x, (int)y, 40, 40);
+            Rect = new Rectangle(x, y, w, h);
         }
 
-        public void Draw(int camera)
-        {
-            Raylib.DrawRectangle((int)Rect.X - camera, (int)Rect.Y + 2, 40, 40, Color.White);
-            Raylib.DrawRectangle((int)Rect.X - camera, (int)Rect.Y+2, 38, 38, Color.Black);
-            Raylib.DrawRectangle((int)Rect.X - camera, (int)Rect.Y+2, 38, 38, Color.Black);
-            Raylib.DrawRectangle((int)Rect.X - camera, (int)Rect.Y, 80, 80, Color.Black);
-        }
+        public abstract void Draw(int camera);
 
         public Rectangle GetRect(int camera)
         {
