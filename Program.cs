@@ -1,7 +1,9 @@
 ﻿using Raylib_cs;
 using System.Numerics;
 using test_raylibs;
+using test_raylibs.Composant;
 using test_raylibs.Obstactle;
+using test_raylibs.Scene;
 
 class Program
 {
@@ -29,6 +31,7 @@ class Program
         int attemps = 0;
 
         Scene scene = Scene.Menu;
+        MenuScene menuScene = new MenuScene();
 
         Player player = new Player();
         player.Position = new Vector2(100, 460);
@@ -36,10 +39,12 @@ class Program
         //init level items
         List<Block> blocks = new List<Block>()
         {
+
+            new Spike(900, 730),
             new SquareBlock(500, 730),
             new SquareBlock(580, 730),
             new SquareBlock(580, 650),
-            new Spike(900, 730)
+            new SpikeFlat(980, 730)
         };
 
         //btn play
@@ -51,7 +56,12 @@ class Program
         {
             float dt = Raylib.GetFrameTime();
 
-            //UPDATE
+            if (scene == Scene.Menu)
+            {
+                string result = menuScene.Update(dt);
+                if (result == "LevelDebug") scene = Scene.LevelDebug;
+            }
+
             if (scene != Scene.Menu)
             {
                 camera += 5;
@@ -92,25 +102,14 @@ class Program
                 }
             }
 
-            //logic menu
-            Vector2 mouse = Raylib.GetMousePosition();
-
-            hover = Raylib.CheckCollisionPointRec(mouse, playButton);
-
-            if (hover && Raylib.IsMouseButtonPressed(MouseButton.Left))
-            {
-                scene = Scene.LevelDebug;
-            }
-
-
             //DRAW
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Color.White);
 
             switch (scene)
             {
-                case Scene.Menu:
-                    DrawSceneMenu();
+                case Scene.Menu: 
+                    menuScene.Draw(dt);
                     break;
                 case Scene.LevelDebug:
                     DrawnLevelDebug(camera);
@@ -132,19 +131,22 @@ class Program
         //menu
         void DrawSceneMenu()
         {
-            Raylib.DrawText("Géometrie dash", screenWitdh / 4, screenHeight / 4, 40, Color.Black);
+            
+            
+
+            //Raylib.DrawText("Géometrie dash", screenWitdh / 4, screenHeight / 4, 40, Color.Black);
 
             int y = screenHeight / 2;
 
             // 3 boutons centrés "à la main"
-            Raylib.DrawRectangle(360, y, 80, 80, Color.Blue);
-            Raylib.DrawRectangle(600, y, 80, 80, Color.Blue);
-            Raylib.DrawRectangle(840, y, 80, 80, Color.Blue);
+           // Raylib.DrawRectangle(360, y, 80, 80, Color.Blue);
+           // Raylib.DrawRectangle(600, y, 80, 80, Color.Blue);
+            //Raylib.DrawRectangle(840, y, 80, 80, Color.Blue);
 
             // bouton play
             Color color = Color.Blue;
 
-            Raylib.DrawRectangleRec(playButton, color);
+           // Raylib.DrawRectangleRec(playButton, color);
 
             Raylib.DrawTriangle(
                 new Vector2(playButton.X + 20, playButton.Y + 20),
