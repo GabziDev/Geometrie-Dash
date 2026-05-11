@@ -6,23 +6,23 @@ using System.Text;
 
 namespace test_raylibs.Obstactle
 {
-    internal class Spike : Block
+    public class Spike : Obtacle
     {
         public Spike(float x, float y) : base(x, y, 80, 80) 
         {
             Rect = new Rectangle(x +20, y, 20, 20);
         }
 
-        public override void Draw(int camera)
+        public override void Draw()
         {
-            Vector2 pos1 = new Vector2(Rect.X + 80 - camera, Rect.Y + 80); // bas droite
-            Vector2 pos2 = new Vector2(Rect.X + 40 - camera, Rect.Y);       // sommet
-            Vector2 pos3 = new Vector2(Rect.X - camera, Rect.Y + 80);       // bas gauche
+            Vector2 pos1 = new Vector2(Rect.X + 80, Rect.Y + 80); // bas droite
+            Vector2 pos2 = new Vector2(Rect.X + 40, Rect.Y);       // sommet
+            Vector2 pos3 = new Vector2(Rect.X, Rect.Y + 80);
 
             Raylib.DrawTriangle(pos1, pos2, pos3, Color.Blue);
 
             //spik hit box
-            Raylib.DrawRectangle(Convert.ToInt32(Rect.X) -camera + 20, Convert.ToInt32(Rect.Y), 20, 20, Color.Red);
+            Raylib.DrawRectangle(Convert.ToInt32(Rect.X) + 20, Convert.ToInt32(Rect.Y), 20, 20, Color.Red);
         }
     }
 }

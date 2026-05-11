@@ -31,6 +31,8 @@ namespace test_raylibs
             Velocity.Y += gravity;
             Position.Y -= Velocity.Y * dt;
 
+            Position.X += 3;
+
             int groundY = 730;
 
 
@@ -50,12 +52,7 @@ namespace test_raylibs
 
         public void Draw()
         {
-            //player
-            // Raylib.DrawRectangle((int)Position.X, (int)Position.Y + 2, 78, 78, Color.Black);
             Raylib.DrawRectangle((int)Position.X, (int)Position.Y, 80, 80, Color.Red);
-
-            //hitbox
-            //return new Rectangle(Position.X + 8, Position.Y + 2, 80, 80);
             Raylib.DrawRectangle((int)Position.X + 8, (int)Position.Y + 2, 70, 70, Color.Blue);
         }
     }

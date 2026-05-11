@@ -4,57 +4,69 @@ using test_raylibs;
 using test_raylibs.Composant;
 using test_raylibs.Obstactle;
 using test_raylibs.Scene;
+using test_raylibs.Tool;
 
 class Program
 {
+    private static Player player;
+    public static int attemps;
+
+    public const int SCREEN_WITDH = 1920;
+    public const int SCREEN_HEIGHT = 1080;
+
     static void Main()
     {
+        //jouaueur
+        player = new Player();
+        player.Position = new Vector2(100, 460);
+
+        //test camera
+        Camera2D cam = new Camera2D();
+        cam.Target = new Vector2(player.Position.X, player.Position.Y);
+        cam.Offset = new Vector2(SCREEN_WITDH / 2f, SCREEN_HEIGHT / 2f);
+        cam.Zoom = 1f;
+
         //init
 
         int display = Raylib.GetCurrentMonitor();
+        
+        StartStats startStat = new StartStats();
+        Debug debug = new Debug();
 
         //int screenWitdh = Raylib.GetMonitorWidth(display);
         //int screenHeight = Raylib.GetMonitorHeight(display);
 
-        int screenWitdh = 1920;
-        int screenHeight = 1080;
-
-
-        Raylib.InitWindow(screenWitdh, screenHeight, "Géometrie dash");
-        Console.WriteLine("L'écran fais " + screenWitdh + " X " + screenHeight);
-        Raylib.SetTargetFPS(60);
-
-        float playerX = 100;
-        float playerY = 460;
-        
-        int camera = 0;
-        int attemps = 0;
+        attemps = 0;
 
         Scene scene = Scene.Menu;
         MenuScene menuScene = new MenuScene();
 
-        Player player = new Player();
-        player.Position = new Vector2(100, 460);
+        Raylib.InitWindow(SCREEN_WITDH, SCREEN_HEIGHT, "Géometrie dash");
+        Raylib.SetTargetFPS(60);
+
 
         //init level items
-        List<Block> blocks = new List<Block>()
+        List<Obtacle> blocks = new List<Obtacle>()
         {
 
             new Spike(900, 730),
             new SquareBlock(500, 730),
             new SquareBlock(580, 730),
             new SquareBlock(580, 650),
-            new SpikeFlat(980, 730)
+            new SpikeFlat(980, 730),
+            new Ground(0, 810)
         };
 
-        //btn play
-        Rectangle playButton = new Rectangle(360, screenHeight / 2, 80, 80);
-        bool hover;
 
         //loop
         while (!Raylib.WindowShouldClose())
         {
             float dt = Raylib.GetFrameTime();
+
+            if (Raylib.IsKeyDown(KeyboardKey.A))
+            {
+                cam.Rotation--;
+            }
 
             if (scene == Scene.Menu)
             {
@@ -64,8 +76,8 @@ class Program
 
             if (scene != Scene.Menu)
             {
-                camera += 5;
                 player.Update(dt);
+                cam.Target = player.Position;
             }
 
             player.isGrounded = false;
@@ -73,21 +85,23 @@ class Program
 
             foreach (var block in blocks)
             {
-                if (Raylib.CheckCollisionRecs(player.GetRect(), block.GetRect(camera)))
+                if (Raylib.CheckCollisionRecs(player.GetRect(), block.GetRect()))
                 {
                     Console.WriteLine("Cllisomn");
-                    //  player.Position = new Vector2(100, 730);
                 }
 
-                if (Raylib.CheckCollisionRecs(player.GetDeathZone(), block.GetRect(camera)))
+                if (Raylib.CheckCollisionRecs(player.GetDeathZone(), block.GetRect()))
                 {
-                    Console.WriteLine("Mort");
-                    attemps++;
-                    player.Position = new Vector2(100, 730);
-                    camera = 0;
+                    Death();
                 }
 
-                Rectangle blockRect = block.GetRect(camera);
+                //detection de spik
+                if (Raylib.CheckCollisionRecs(player.GetDeathZone(), block.GetRect()))
+                {
+                    Death();
+                }
+
+                Rectangle blockRect = block.GetRect();
 
                 if (Raylib.CheckCollisionRecs(player.GetRect(), blockRect))
                 {
@@ -106,75 +120,50 @@ class Program
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Color.White);
 
+
             switch (scene)
             {
                 case Scene.Menu: 
                     menuScene.Draw(dt);
                     break;
                 case Scene.LevelDebug:
-                    DrawnLevelDebug(camera);
+                    startStat.Draw();
+                    if (Raylib.IsKeyDown(KeyboardKey.Q))
+                    {
+                        debug.Draw();
+                    }
+
+                    Raylib.BeginMode2D(cam);
                     foreach (var block in blocks)
                     {
-                        block.Draw(camera);
+                        block.Draw();
                     }
                     player.Draw();
+                    Raylib.EndMode2D();
                     break;
             }
 
-            DrawGround();
+            //DrawGround();
+            cam.Target = player.Position;
 
             Raylib.EndDrawing();
-        }
-
-        // ----- Scene ----- //
-
-        //menu
-        void DrawSceneMenu()
-        {
-            
-            
-
-            //Raylib.DrawText("Géometrie dash", screenWitdh / 4, screenHeight / 4, 40, Color.Black);
-
-            int y = screenHeight / 2;
-
-            // 3 boutons centrés "à la main"
-           // Raylib.DrawRectangle(360, y, 80, 80, Color.Blue);
-           // Raylib.DrawRectangle(600, y, 80, 80, Color.Blue);
-            //Raylib.DrawRectangle(840, y, 80, 80, Color.Blue);
-
-            // bouton play
-            Color color = Color.Blue;
-
-           // Raylib.DrawRectangleRec(playButton, color);
-
-            Raylib.DrawTriangle(
-                new Vector2(playButton.X + 20, playButton.Y + 20),
-                new Vector2(playButton.X + 20, playButton.Y + 60),
-                new Vector2(playButton.X + 60, playButton.Y + 40),
-                Color.White
-            );
-        }
-
-        void DrawnLevelDebug(int camera)
-        {
-            Raylib.DrawText("Géometrie dash", screenWitdh / 2 - camera, screenHeight / 4, 40, Color.Black);
-            Raylib.DrawText("Attemps : " + attemps, screenWitdh / 2 - camera, screenHeight / 4 + 50, 20, Color.Black);
         }
 
 
         // ----- Element ----- //
 
+        /*
         //sol
         void DrawGround()
         {
-            int groundY = screenHeight * 3 / 4;
+            int groundY = SCREEN_HEIGHT * 3 / 4;
 
-            Raylib.DrawRectangle(0, groundY, screenWitdh, 300, Color.Red);
-            Raylib.DrawRectangle(0, groundY, screenWitdh, 4, Color.Black);
+            Raylib.DrawRectangle(0, groundY, 100, 300, Color.Red);
+            Raylib.DrawRectangle(0, groundY, 100, 4, Color.Black);
         }
 
         Raylib.CloseWindow();
+        */
     }
 
     enum Scene
@@ -183,6 +172,10 @@ class Program
         LevelDebug,
         Level_1
     }
+
+    static void Death()
+    {
+        player.Position = new Vector2(100, 730);
+        attemps++;
+    }
 }
-
-

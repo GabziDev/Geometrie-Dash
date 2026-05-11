@@ -5,14 +5,14 @@ using System.Text;
 
 namespace test_raylibs.Obstactle
 {
-    internal class SquareBlock : Block
+    public class SquareBlock : Obtacle
     {
         public SquareBlock(float x, float y) : base(x, y, 80, 80) { }
 
-        public override void Draw(int camera)
+        public override void Draw()
         {
-            Raylib.DrawRectangle((int)Rect.X - camera, (int)Rect.Y, 80, 80, Color.White);
-            Raylib.DrawRectangle((int)Rect.X - camera, (int)Rect.Y, 78, 78, Color.Black);
+            Raylib.DrawRectangle((int)Rect.X, (int)Rect.Y, 80, 80, Color.White);
+            Raylib.DrawRectangle((int)Rect.X, (int)Rect.Y, 78, 78, Color.Black);
         }
     }
 }
