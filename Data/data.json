@@ -1,3 +1,4 @@
 {
-  "playerColor" => "Blue",
+  "playerColor": "Blue",
+  "xp" :  0
 }

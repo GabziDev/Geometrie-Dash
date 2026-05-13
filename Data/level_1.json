@@ -1,0 +1,40 @@
+﻿{
+  "attemps": 0,
+  "maxPercentage": 0,
+  "finished": false,
+  "levelLength": 0,
+  "data": {
+    "blocks": [
+      {
+        "type": "Spike",
+        "x": 900,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 500,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 580,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 580,
+        "y": 650
+      },
+      {
+        "type": "SpikeFlat",
+        "x": 980,
+        "y": 730
+      },
+      {
+        "type": "Ground",
+        "x": 0,
+        "y": 810
+      }
+    ]
+  }
+}

@@ -13,7 +13,7 @@ namespace test_raylibs.Scene
         Button btnPlay = new Button(600, 540, Color.Brown, "aaa");
         Button btnSetting = new Button(840, 540, Color.Brown, "aaa");
 
-        public string Update(float dt)
+        public string Update()
         {
             if (btnPlay.IsClicked())
             { 
@@ -27,14 +27,13 @@ namespace test_raylibs.Scene
             {
                 return "Menu";
             }
-            return "Menu";
+            return null;
         }
 
-        public void Draw(float dt)
+        public void Draw()
         {
             Raylib.DrawText("Géometrie dash", 960 , 1080 / 4, 40, Color.Black);
 
-            
             btnPlay.Draw();
             btnSetting.Draw();
             btnSkin.Draw();

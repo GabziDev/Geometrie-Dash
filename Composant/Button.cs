@@ -12,12 +12,8 @@ namespace test_raylibs.Composant
         public int y;
         public Color color;
         public string link;
-        //
 
-        static int screenWitdh = 1920;
-        static int screenHeight = 1080;
-
-        Rectangle playButton = new Rectangle(360, screenHeight / 2, 80, 80);
+        Rectangle playButton = new Rectangle(360, Program.SCREEN_HEIGHT / 2, 80, 80);
 
         public bool IsClicked()
         {
@@ -36,7 +32,6 @@ namespace test_raylibs.Composant
             this.link = link;
         }
 
-
         public void Draw()
         {
             Raylib.DrawRectangle(x, y, 80, 80, Color.Red);
@@ -49,8 +44,6 @@ namespace test_raylibs.Composant
                 new Vector2(playButton.X + 60, playButton.Y + 40),
                 Color.Blue
             );
-
-            
         }
     }
 }

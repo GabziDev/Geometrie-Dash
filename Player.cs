@@ -6,7 +6,7 @@ using System.Text;
 
 namespace test_raylibs
 {
-    internal class Player
+    public class Player
     {
         public Vector2 Position;
         public Vector2 Velocity;
@@ -48,6 +48,12 @@ namespace test_raylibs
             {
                 Velocity.Y = 650;
             }
+        }
+
+        public void Death()
+        {
+            Position = new Vector2(100, 730);
+           Program.attemps++;
         }
 
         public void Draw()
