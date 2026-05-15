@@ -1,10 +1,13 @@
 ﻿using Raylib_cs;
 using System.Numerics;
+using System.Text.Json;
 using test_raylibs;
-using test_raylibs.Levels;
-using test_raylibs.Scene;
-using test_raylibs.Tool;
 using test_raylibs.Enum;
+using test_raylibs.Levels;
+using test_raylibs.Model;
+using test_raylibs.Scene;
+using test_raylibs.Services;
+using test_raylibs.Tool;
 
 class Program
 {
@@ -15,9 +18,10 @@ class Program
     public const int SCREEN_WITDH = 1920;
     public const int SCREEN_HEIGHT = 1080;
 
+    public static bool running = true;
+
     static void Main()
     {
-        int frame = 0;
 
         //joueur
         Player player = new Player();
@@ -38,10 +42,11 @@ class Program
 
         //load windows
         Raylib.InitWindow(SCREEN_WITDH, SCREEN_HEIGHT, "Géometrie dash");
+        Raylib.SetExitKey(KeyboardKey.Null);
         Raylib.SetTargetFPS(60);
 
         // -- BOUCLE -- //
-        while (!Raylib.WindowShouldClose())
+        while (Program.running)
         {
             float dt = Raylib.GetFrameTime();
 
@@ -68,6 +73,14 @@ class Program
             }
 
             player.isGrounded = false;
+
+            //SAVE
+            if (Raylib.IsKeyPressed(KeyboardKey.Escape))
+            {
+                Console.WriteLine("Saving...");
+                GameManager.SaveGame();
+                GameManager.QuitGame();
+            }
 
 
             //DRAW
@@ -96,6 +109,11 @@ class Program
             cam.Target = player.Position;
 
             Raylib.EndDrawing();
+
+            if (GameManager.shouldQuit || Raylib.WindowShouldClose())
+            {
+                Program.running = false;
+            }
         }
     }
 }

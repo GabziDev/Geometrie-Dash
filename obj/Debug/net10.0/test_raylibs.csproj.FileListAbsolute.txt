@@ -43,6 +43,6 @@ C:\Users\Admin\Desktop\Cours\ATT_PROJ\geometrie-dash\obj\Debug\net10.0\refint\te
 C:\Users\Admin\Desktop\Cours\ATT_PROJ\geometrie-dash\obj\Debug\net10.0\test_raylibs.pdb
 C:\Users\Admin\Desktop\Cours\ATT_PROJ\geometrie-dash\obj\Debug\net10.0\test_raylibs.genruntimeconfig.cache
 C:\Users\Admin\Desktop\Cours\ATT_PROJ\geometrie-dash\obj\Debug\net10.0\ref\test_raylibs.dll
-C:\Users\Admin\Desktop\Cours\ATT_PROJ\geometrie-dash\bin\Debug\net10.0\Data\data.json
 C:\Users\Admin\Desktop\Cours\ATT_PROJ\geometrie-dash\bin\Debug\net10.0\Data\level_1.json
 C:\Users\Admin\Desktop\Cours\ATT_PROJ\geometrie-dash\bin\Debug\net10.0\Data\LevelDebug.json
+C:\Users\Admin\Desktop\Cours\ATT_PROJ\geometrie-dash\bin\Debug\net10.0\Data\Player.json

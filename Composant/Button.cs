@@ -34,8 +34,9 @@ namespace test_raylibs.Composant
 
         public void Draw()
         {
-            Raylib.DrawRectangle(x, y, 80, 80, Color.Red);
-            Raylib.DrawRectangleRec(playButton, color);
+             Rectangle playButton = new Rectangle(y, Program.SCREEN_HEIGHT / 2, 80, 80);
+            Raylib.DrawRectangle(x, y, 80, 80, color);
+           // Raylib.DrawRectangleRec(playButton, color);
 
 
             Raylib.DrawTriangle(

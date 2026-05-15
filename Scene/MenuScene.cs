@@ -9,9 +9,12 @@ namespace test_raylibs.Scene
 {
     public class MenuScene
     {
-        Button btnSkin = new Button(360, 540, Color.Brown, "aaa");
-        Button btnPlay = new Button(600, 540, Color.Brown, "aaa");
-        Button btnSetting = new Button(840, 540, Color.Brown, "aaa");
+        static float w = Program.SCREEN_WITDH;
+        static float h = Program.SCREEN_HEIGHT;
+
+        Button btnSkin = new Button(Convert.ToInt32(w * 1f / 6f), (int)h /2, Color.Brown, "aaa");
+        Button btnPlay = new Button(Convert.ToInt32(w * 1f / 2f), (int)h / 2, Color.Brown, "aaa");
+        Button btnSetting = new Button(Convert.ToInt32(w * 5f / 6f), (int)h / 2, Color.Brown, "aaa");
 
         public string Update()
         {
@@ -32,7 +35,7 @@ namespace test_raylibs.Scene
 
         public void Draw()
         {
-            Raylib.DrawText("Géometrie dash", 960 , 1080 / 4, 40, Color.Black);
+            Raylib.DrawText("Géometrie dash", (int)w/2 , 1080 / 4, 40, Color.Black);
 
             btnPlay.Draw();
             btnSetting.Draw();
