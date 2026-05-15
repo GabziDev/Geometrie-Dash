@@ -10,15 +10,18 @@ class Program
 {
     public static int attemps;
     public static string currentLevel = "menu";
+    public static Color bgColor = Color.White;
 
     public const int SCREEN_WITDH = 1920;
     public const int SCREEN_HEIGHT = 1080;
 
     static void Main()
     {
+        int frame = 0;
+
         //joueur
         Player player = new Player();
-        player.Position = new Vector2(100, 460);
+        player.Position = new Vector2(100, 730);
         
         //camera
         Camera2D cam = new Camera2D();
@@ -28,8 +31,6 @@ class Program
 
         //level 
         Level level = new Level();
-        
-        StartStats startStat = new StartStats();
         Debug debug = new Debug();
 
         Scene scene = Scene.Menu;
@@ -68,9 +69,10 @@ class Program
 
             player.isGrounded = false;
 
+
             //DRAW
             Raylib.BeginDrawing();
-            Raylib.ClearBackground(Color.White);
+            Raylib.ClearBackground(Program.bgColor);
 
 
             if (scene == Scene.Menu)
@@ -79,7 +81,6 @@ class Program
             }
             else
             {
-                startStat.Draw();
                 if (Raylib.IsKeyDown(KeyboardKey.Q))
                 {
                     debug.Draw();

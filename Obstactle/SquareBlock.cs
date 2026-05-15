@@ -7,7 +7,7 @@ namespace test_raylibs.Obstactle
 {
     public class SquareBlock : Obtacle
     {
-        public SquareBlock(float x, float y) : base(x, y, 80, 80) { }
+        public SquareBlock(int x, int y) : base(x, y, 80, 80) { }
 
         public override void Draw()
         {

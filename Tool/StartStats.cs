@@ -12,8 +12,8 @@ namespace test_raylibs.Tool
 
         public void Draw()
         {
-            Raylib.DrawText("Géometrie dash", 200, 200, 40, Color.Black);
-            Raylib.DrawText("Attemps : " + Program.attemps, 200, 250, 20, Color.Black);
+            Raylib.DrawText("Géometrie dash", 200, 400, 40, Color.Black);
+            Raylib.DrawText("Attemps : " + Program.attemps, 200, 450, 20, Color.Black);
         }
     }
 }

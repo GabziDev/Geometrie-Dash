@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("test_raylibs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7209aee2556795e968d4259788c22fe5bf262b33")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+636977631b8305498d563c61867a1926b518a6b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("test_raylibs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("test_raylibs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

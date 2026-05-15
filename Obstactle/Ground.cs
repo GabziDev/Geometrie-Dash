@@ -8,7 +8,7 @@ namespace test_raylibs.Obstactle
 {
     internal class Ground : Obtacle
     {
-        public Ground(float x, float y) : base(x, y, 10000, 800) { }
+        public Ground(int x, int y) : base(x, y, 10000, 800) { }
 
         public override void Draw()
         {

@@ -9,7 +9,7 @@ namespace test_raylibs.Obstactle
     {
         public Rectangle Rect;
 
-        public Obtacle(float x, float y, float w, float h)
+        public Obtacle(int x, int y, int w, int h)
         {
             Rect = new Rectangle(x, y, w, h);
         }

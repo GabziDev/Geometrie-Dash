@@ -3,6 +3,7 @@
   "maxPercentage": 0,
   "finished": false,
   "levelLength": 0,
+  "bgColor": "FFFFFFFF",
   "data": {
     "blocks": [
       {

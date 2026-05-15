@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
 using System.Text.Json;
-using test_raylibs.Obstactle;
 using test_raylibs.Model;
+using test_raylibs.Obstactle;
+using test_raylibs.Tool;
 
 namespace test_raylibs.Levels
 {
@@ -15,13 +16,20 @@ namespace test_raylibs.Levels
 
         public string currentLevel = Program.currentLevel;
 
+
+        StartStats startStats = new StartStats();
+
+
         //charge les object du nivaux
         public void Load(string level)
         {
             string text = File.ReadAllText(@"./Data/" + level + ".json");
-            Console.WriteLine(text);
+            
 
             var levelData = JsonSerializer.Deserialize<LevelData>(text);
+            string stringColor = levelData.bgColor;
+            Console.WriteLine(stringColor);
+            Program.bgColor = Raylib.GetColor(Convert.ToUInt32(stringColor, 16));
 
             foreach (var block in levelData.data.blocks)
             {
@@ -70,7 +78,7 @@ namespace test_raylibs.Levels
         //dessine
         public void Draw()
         {
-            
+            startStats.Draw();
             foreach (var block in Blocks)
             {
                 block.Draw();

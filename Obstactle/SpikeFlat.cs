@@ -8,7 +8,7 @@ namespace test_raylibs.Obstactle
 {
     public class SpikeFlat : Obtacle
     {
-        public SpikeFlat(float x, float y) : base(x, y, 80, 80)
+        public SpikeFlat(int x, int y) : base(x, y, 80, 80)
         {
             Rect = new Rectangle(x, y + 40, 80, 40); 
         }
