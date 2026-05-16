@@ -5,11 +5,11 @@ using System.Text;
 
 namespace test_raylibs.Obstactle
 {
-    public abstract class Obtacle
+    public abstract class Obstacle
     {
         public Rectangle Rect;
 
-        public Obtacle(int x, int y, int w, int h)
+        public Obstacle(int x, int y, int w, int h)
         {
             Rect = new Rectangle(x, y, w, h);
         }

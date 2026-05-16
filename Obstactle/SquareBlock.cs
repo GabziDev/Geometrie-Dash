@@ -5,7 +5,7 @@ using System.Text;
 
 namespace test_raylibs.Obstactle
 {
-    public class SquareBlock : Obtacle
+    public class SquareBlock : Obstacle
     {
         public SquareBlock(int x, int y) : base(x, y, 80, 80) { }
 

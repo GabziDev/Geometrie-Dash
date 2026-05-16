@@ -12,7 +12,7 @@ namespace test_raylibs.Levels
 {
     public class Level
     {
-        public List<Obtacle> Blocks = new List<Obtacle>();
+        public List<Obstacle> Blocks = new List<Obstacle>();
 
         public string currentLevel = Program.currentLevel;
 
@@ -44,14 +44,17 @@ namespace test_raylibs.Levels
             
         }
 
-        //logic
         public void Update(Player player)
         {
             foreach (var block in Blocks)
             {
-                if (Raylib.CheckCollisionRecs(player.GetRect(), block.GetRect()))
+                if (block is Spike spike)
                 {
-                    Console.WriteLine("Cllisomn");
+                    if (Raylib.CheckCollisionRecs(player.GetDeathZone(), spike.GetHitbox()))
+                    {
+                        player.Death();
+                    }
+                    continue;
                 }
 
                 if (Raylib.CheckCollisionRecs(player.GetDeathZone(), block.GetRect()))

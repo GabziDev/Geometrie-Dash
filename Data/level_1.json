@@ -1,5 +1,4 @@
 ﻿{
-  "attemps": 0,
   "maxPercentage": 0,
   "finished": false,
   "levelLength": 0,
@@ -35,6 +34,11 @@
         "type": "Ground",
         "x": 0,
         "y": 810
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1060,
+        "y": 730
       }
     ]
   }

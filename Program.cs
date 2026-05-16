@@ -43,7 +43,7 @@ class Program
         //load windows
         Raylib.InitWindow(SCREEN_WITDH, SCREEN_HEIGHT, "Géometrie dash");
         Raylib.SetExitKey(KeyboardKey.Null);
-        Raylib.SetTargetFPS(60);
+        Raylib.SetTargetFPS(120);
 
         // -- BOUCLE -- //
         while (Program.running)

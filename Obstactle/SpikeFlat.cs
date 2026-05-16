@@ -6,7 +6,7 @@ using System.Text;
 
 namespace test_raylibs.Obstactle
 {
-    public class SpikeFlat : Obtacle
+    public class SpikeFlat : Obstacle
     {
         public SpikeFlat(int x, int y) : base(x, y, 80, 80)
         {

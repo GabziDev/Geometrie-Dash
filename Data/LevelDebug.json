@@ -1,5 +1,4 @@
 ﻿{
-  "attemps": 0,
   "maxPercentage": 0,
   "finished": false,
   "levelLength": 0,
@@ -27,14 +26,89 @@
         "y": 650
       },
       {
-        "type": "SpikeFlat",
-        "x": 980,
-        "y": 730
-      },
-      {
         "type": "Ground",
         "x": 0,
         "y": 810
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1220,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1300,
+        "y": 650
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1300,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1380,
+        "y": 650
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1380,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1460,
+        "y": 650
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1460,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1540,
+        "y": 650
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1540,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1700,
+        "y": 650
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1780,
+        "y": 650
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1860,
+        "y": 650
+      },
+      {
+        "type": "SquareBlock",
+        "x": 2020,
+        "y": 650
+      },
+      {
+        "type": "SquareBlock",
+        "x": 2020,
+        "y": 730
+      },
+      {
+        "type": "Spike",
+        "x": 2100,
+        "y": 730
+      },
+      {
+        "type": "Spike",
+        "x": 2180,
+        "y": 730
       }
     ]
   }

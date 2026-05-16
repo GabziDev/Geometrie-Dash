@@ -12,9 +12,6 @@ namespace test_raylibs.Scene
         static float w = Program.SCREEN_WITDH;
         static float h = Program.SCREEN_HEIGHT;
 
-
-
-
         public void Draw()
         {
             Raylib.DrawText("Statistiques", (int)w/2 , 1080 / 4, 40, Color.Black);

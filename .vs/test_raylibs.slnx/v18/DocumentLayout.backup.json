@@ -3,20 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\data\\player.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:data\\player.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\obstactle\\spike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:obstactle\\spike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\data\\leveldebug.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:data\\leveldebug.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\services\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:services\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\levels\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:levels\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\data\\level_1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:data\\level_1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\data\\player.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:data\\player.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\scene\\statsscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:scene\\statsscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\services\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:services\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\obstactle\\obstacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:obstactle\\obstacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\obstactle\\ground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:obstactle\\ground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\obstactle\\spikeflat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:obstactle\\spikeflat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\model\\jsondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:model\\jsondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\model\\blockdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:model\\blockdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\test_raylibs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:test_raylibs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\enum\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,36 +75,12 @@
       "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:tool\\startstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\levels\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:levels\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\model\\playerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:model\\playerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\data\\level_1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:data\\level_1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\scene\\statsscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:scene\\statsscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\scene\\menuscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:scene\\menuscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\model\\jsondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:model\\jsondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\model\\blockdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:model\\blockdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\model\\leveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,28 +91,8 @@
       "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:composant\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\obstactle\\spike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:obstactle\\spike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\obstactle\\spikeflat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:obstactle\\spikeflat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\test_raylibs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:test_raylibs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\obstactle\\obtacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:obstactle\\obtacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\obstactle\\ground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|solutionrelative:obstactle\\ground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47A8C0D7-6F75-3BD5-1E3D-2C068EED775A}|test_raylibs.csproj|c:\\users\\admin\\desktop\\cours\\att_proj\\geometrie-dash\\obstactle\\squareblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,58 +106,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Obtacle.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\Obtacle.cs",
-              "RelativeDocumentMoniker": "Obstactle\\Obtacle.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\Obtacle.cs",
-              "RelativeToolTip": "Obstactle\\Obtacle.cs",
+              "DocumentIndex": 9,
+              "Title": "Obstacle.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\Obstacle.cs",
+              "RelativeDocumentMoniker": "Obstactle\\Obstacle.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\Obstacle.cs",
+              "RelativeToolTip": "Obstactle\\Obstacle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T09:35:20.421Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Player.json",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Data\\Player.json",
-              "RelativeDocumentMoniker": "Data\\Player.json",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Data\\Player.json",
-              "RelativeToolTip": "Data\\Player.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-11T12:47:54.963Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MenuScene.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Scene\\MenuScene.cs",
-              "RelativeDocumentMoniker": "Scene\\MenuScene.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Scene\\MenuScene.cs",
-              "RelativeToolTip": "Scene\\MenuScene.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBUAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T13:38:57.742Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "level_1.json",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Data\\level_1.json",
-              "RelativeDocumentMoniker": "Data\\level_1.json",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Data\\level_1.json",
-              "RelativeToolTip": "Data\\level_1.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-13T22:07:48.58Z",
+              "DocumentIndex": 14,
+              "Title": "test_raylibs.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\test_raylibs.csproj",
+              "RelativeDocumentMoniker": "test_raylibs.csproj",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\test_raylibs.csproj",
+              "RelativeToolTip": "test_raylibs.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-11T12:47:12.894Z",
               "EditorCaption": ""
             },
             {
@@ -168,35 +143,22 @@
               "RelativeDocumentMoniker": "Data\\LevelDebug.json",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Data\\LevelDebug.json",
               "RelativeToolTip": "Data\\LevelDebug.json",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAHIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-05-13T23:31:04.922Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "StartStats.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Tool\\StartStats.cs",
-              "RelativeDocumentMoniker": "Tool\\StartStats.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Tool\\StartStats.cs",
-              "RelativeToolTip": "Tool\\StartStats.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "Ground.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\Ground.cs",
+              "RelativeDocumentMoniker": "Obstactle\\Ground.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\Ground.cs",
+              "RelativeToolTip": "Obstactle\\Ground.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T20:40:18.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAUwDAAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T07:44:44.411Z",
+              "WhenOpened": "2026-05-11T21:20:38.773Z",
               "EditorCaption": ""
             },
             {
@@ -207,14 +169,27 @@
               "RelativeDocumentMoniker": "Player.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Player.cs",
               "RelativeToolTip": "Player.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA5wDwAAABUAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwB0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T09:29:04.581Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAgwEUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T07:44:44.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Services\\GameManager.cs",
               "RelativeDocumentMoniker": "Services\\GameManager.cs",
@@ -227,20 +202,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Debug.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Tool\\Debug.cs",
-              "RelativeDocumentMoniker": "Tool\\Debug.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Tool\\Debug.cs",
-              "RelativeToolTip": "Tool\\Debug.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "StatsScene.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Scene\\StatsScene.cs",
+              "RelativeDocumentMoniker": "Scene\\StatsScene.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Scene\\StatsScene.cs",
+              "RelativeToolTip": "Scene\\StatsScene.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T20:10:38.484Z",
+              "WhenOpened": "2026-05-15T20:31:40.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "level_1.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Data\\level_1.json",
+              "RelativeDocumentMoniker": "Data\\level_1.json",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Data\\level_1.json",
+              "RelativeToolTip": "Data\\level_1.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-13T22:07:48.58Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Player.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Data\\Player.json",
+              "RelativeDocumentMoniker": "Data\\Player.json",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Data\\Player.json",
+              "RelativeToolTip": "Data\\Player.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-11T12:47:54.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Spike.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\Spike.cs",
+              "RelativeDocumentMoniker": "Obstactle\\Spike.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\Spike.cs",
+              "RelativeToolTip": "Obstactle\\Spike.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCkAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T09:20:36.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Level.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Levels\\Level.cs",
+              "RelativeDocumentMoniker": "Levels\\Level.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Levels\\Level.cs",
+              "RelativeToolTip": "Levels\\Level.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAiwDIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T21:06:39.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SpikeFlat.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\SpikeFlat.cs",
+              "RelativeDocumentMoniker": "Obstactle\\SpikeFlat.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\SpikeFlat.cs",
+              "RelativeToolTip": "Obstactle\\SpikeFlat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T12:59:15.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "JsonData.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Model\\JsonData.cs",
+              "RelativeDocumentMoniker": "Model\\JsonData.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Model\\JsonData.cs",
+              "RelativeToolTip": "Model\\JsonData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T23:32:29.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Scene.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Enum\\Scene.cs",
               "RelativeDocumentMoniker": "Enum\\Scene.cs",
@@ -248,64 +301,23 @@
               "RelativeToolTip": "Enum\\Scene.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T23:35:10.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T23:35:10.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Debug.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Tool\\Debug.cs",
+              "RelativeDocumentMoniker": "Tool\\Debug.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Tool\\Debug.cs",
+              "RelativeToolTip": "Tool\\Debug.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T20:10:38.484Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "JsonData.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Model\\JsonData.cs",
-              "RelativeDocumentMoniker": "Model\\JsonData.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Model\\JsonData.cs",
-              "RelativeToolTip": "Model\\JsonData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T23:32:29.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "StatsScene.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Scene\\StatsScene.cs",
-              "RelativeDocumentMoniker": "Scene\\StatsScene.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Scene\\StatsScene.cs",
-              "RelativeToolTip": "Scene\\StatsScene.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T20:31:40.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PlayerData.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Model\\PlayerData.cs",
-              "RelativeDocumentMoniker": "Model\\PlayerData.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Model\\PlayerData.cs",
-              "RelativeToolTip": "Model\\PlayerData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T20:40:46.5Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Level.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Levels\\Level.cs",
-              "RelativeDocumentMoniker": "Levels\\Level.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Levels\\Level.cs",
-              "RelativeToolTip": "Levels\\Level.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T21:06:39.355Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "BlockData.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Model\\BlockData.cs",
               "RelativeDocumentMoniker": "Model\\BlockData.cs",
@@ -318,7 +330,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
+              "Title": "StartStats.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Tool\\StartStats.cs",
+              "RelativeDocumentMoniker": "Tool\\StartStats.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Tool\\StartStats.cs",
+              "RelativeToolTip": "Tool\\StartStats.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T20:40:18.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MenuScene.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Scene\\MenuScene.cs",
+              "RelativeDocumentMoniker": "Scene\\MenuScene.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Scene\\MenuScene.cs",
+              "RelativeToolTip": "Scene\\MenuScene.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T13:38:57.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PlayerData.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Model\\PlayerData.cs",
+              "RelativeDocumentMoniker": "Model\\PlayerData.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Model\\PlayerData.cs",
+              "RelativeToolTip": "Model\\PlayerData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T20:40:46.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "LevelData.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Model\\LevelData.cs",
               "RelativeDocumentMoniker": "Model\\LevelData.cs",
@@ -326,12 +374,11 @@
               "RelativeToolTip": "Model\\LevelData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T23:31:45.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T23:31:45.902Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "Button.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Composant\\Button.cs",
               "RelativeDocumentMoniker": "Composant\\Button.cs",
@@ -343,55 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "test_raylibs.csproj",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\test_raylibs.csproj",
-              "RelativeDocumentMoniker": "test_raylibs.csproj",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\test_raylibs.csproj",
-              "RelativeToolTip": "test_raylibs.csproj",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAAA4AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-11T12:47:12.894Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "SpikeFlat.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\SpikeFlat.cs",
-              "RelativeDocumentMoniker": "Obstactle\\SpikeFlat.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\SpikeFlat.cs",
-              "RelativeToolTip": "Obstactle\\SpikeFlat.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAABgAAABuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T12:59:15.1Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Spike.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\Spike.cs",
-              "RelativeDocumentMoniker": "Obstactle\\Spike.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\Spike.cs",
-              "RelativeToolTip": "Obstactle\\Spike.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T09:20:36.15Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "Ground.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\Ground.cs",
-              "RelativeDocumentMoniker": "Obstactle\\Ground.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\Obstactle\\Ground.cs",
-              "RelativeToolTip": "Obstactle\\Ground.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T21:20:38.773Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROJ\\geometrie-dash\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -411,7 +410,8 @@
               "RelativeToolTip": "Obstactle\\SquareBlock.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:04:51.147Z"
+              "WhenOpened": "2026-05-08T07:04:51.147Z",
+              "EditorCaption": ""
             }
           ]
         }

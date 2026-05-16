@@ -6,7 +6,7 @@ using System.Text;
 
 namespace test_raylibs.Obstactle
 {
-    internal class Ground : Obtacle
+    internal class Ground : Obstacle
     {
         public Ground(int x, int y) : base(x, y, 10000, 800) { }
 

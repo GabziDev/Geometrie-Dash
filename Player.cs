@@ -26,12 +26,13 @@ namespace test_raylibs
 
         public void Update(float dt)
         {
-            float gravity = -30;
+            float gravity = -1800f;
+            float moveSpeed = 250;
 
-            Velocity.Y += gravity;
+            Velocity.Y += gravity * dt;
             Position.Y -= Velocity.Y * dt;
 
-            Position.X += 3;
+            Position.X += moveSpeed * dt;
 
             int groundY = 730;
 
@@ -46,13 +47,13 @@ namespace test_raylibs
 
             if (Raylib.IsKeyDown(KeyboardKey.Space) && isGrounded)
             {
-                Velocity.Y = 650;
+                Velocity.Y = 700;
             }
         }
 
         public void Death()
         {
-            Position = new Vector2(100, 730);
+           Position = new Vector2(100, 730);
            Program.attemps++;
         }
 
