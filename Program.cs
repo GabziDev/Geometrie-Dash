@@ -29,13 +29,14 @@ class Program
         
         //camera
         Camera2D cam = new Camera2D();
-        cam.Target = new Vector2(player.Position.X, player.Position.Y);
+        cam.Target = new Vector2(player.Position.X, player.Position.Y - 150);
         cam.Offset = new Vector2(SCREEN_WITDH / 3f, SCREEN_HEIGHT / 2f);
         cam.Zoom = 1f;
 
         //level 
         Level level = new Level();
         Debug debug = new Debug();
+        ProgressBar progressBar = new ProgressBar();
 
         Scene scene = Scene.Menu;
         MenuScene menuScene = new MenuScene();
@@ -64,7 +65,7 @@ class Program
             else
             {
                 player.Update(dt);
-                cam.Target = player.Position;
+                cam.Target.X = player.Position.X;
             }
 
             if (Raylib.IsKeyDown(KeyboardKey.A))
@@ -98,15 +99,13 @@ class Program
                 {
                     debug.Draw();
                 }
-
                 Raylib.BeginMode2D(cam);
                 player.Draw();
                 level.Update(player);
                 level.Draw();
                 Raylib.EndMode2D();
+                progressBar.Draw(level.GetPourcentage());
             }
-
-            cam.Target = player.Position;
 
             Raylib.EndDrawing();
 

@@ -1,7 +1,7 @@
 ﻿{
   "maxPercentage": 0,
   "finished": false,
-  "levelLength": 0,
+  "levelLength": 3700,
   "bgColor": "FFFFFFFF",
   "data": {
     "blocks": [
@@ -109,6 +109,51 @@
         "type": "Spike",
         "x": 2180,
         "y": 730
+      },
+      {
+        "type": "Spike",
+        "x": 2500,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 2580,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 2660,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 2740,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 2740,
+        "y": 650
+      },
+      {
+        "type": "Spike",
+        "x": 2820,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 2900,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 2900,
+        "y": 650
+      },
+      {
+        "type": "EndLevel",
+        "x": 3700,
+        "y": -1000
       }
     ]
   }

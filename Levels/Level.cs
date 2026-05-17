@@ -19,6 +19,10 @@ namespace test_raylibs.Levels
 
         StartStats startStats = new StartStats();
 
+        public float levelLenght;
+        public float pourcentage = 0;
+
+
 
         //charge les object du nivaux
         public void Load(string level)
@@ -28,7 +32,6 @@ namespace test_raylibs.Levels
 
             var levelData = JsonSerializer.Deserialize<LevelData>(text);
             string stringColor = levelData.bgColor;
-            Console.WriteLine(stringColor);
             Program.bgColor = Raylib.GetColor(Convert.ToUInt32(stringColor, 16));
 
             foreach (var block in levelData.data.blocks)
@@ -39,9 +42,11 @@ namespace test_raylibs.Levels
                     case "SquareBlock": Blocks.Add(new SquareBlock(block.x, block.y)); break;
                     case "SpikeFlat": Blocks.Add(new SpikeFlat(block.x, block.y)); break;
                     case "Ground": Blocks.Add(new Ground(block.x, block.y)); break;
+                    case "EndLevel": Blocks.Add(new EndLevel(block.x, block.y));
+                        levelLenght = block.x;
+                        break;
                 }
             }
-            
         }
 
         public void Update(Player player)
@@ -57,10 +62,22 @@ namespace test_raylibs.Levels
                     continue;
                 }
 
+                //finishLevel
+                if (block is EndLevel endLevel)
+                {
+                    if (Raylib.CheckCollisionRecs(player.GetDeathZone(), endLevel.GetRect()))
+                    {
+                        Console.WriteLine("Level completed");
+                        player.LevelCompleted();
+                    }
+                    continue;
+                }
+
                 if (Raylib.CheckCollisionRecs(player.GetDeathZone(), block.GetRect()))
                 {
                     player.Death();
                 }
+
 
                 Rectangle blockRect = block.GetRect();
 
@@ -75,7 +92,20 @@ namespace test_raylibs.Levels
                         player.isGrounded = true;
                     }
                 }
+
+                pourcentage = GetLevelPourcentage(player);
             }
+        }
+
+        public float GetPourcentage()
+        {
+            return pourcentage;
+        }
+
+        public float GetLevelPourcentage(Player player)
+        {
+            float raw = (player.Position.X / levelLenght) * 100f;
+            return Math.Clamp(raw, 0f, 100f);
         }
 
         //dessine
