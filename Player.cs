@@ -61,13 +61,13 @@ namespace test_raylibs
 
         public void Death()
         {
-           Position = new Vector2(100, 730);
+           Position = new Vector2(0, 730);
            Program.attemps++;
         }
 
         public void Draw()
         {
-            Raylib.DrawRectangle((int)Position.X, (int)Position.Y, 80, 80, Color.Blue);
+            Raylib.DrawRectangleRec(GetRect(), Color.Blue);
             Raylib.DrawRectangle((int)Position.X + 8, (int)Position.Y + 2, 70, 70, Color.Blue);
         }
     }

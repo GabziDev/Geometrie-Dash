@@ -7,6 +7,7 @@ using System.Text.Json;
 using test_raylibs.Model;
 using test_raylibs.Obstactle;
 using test_raylibs.Tool;
+using test_raylibs.Composant;
 
 namespace test_raylibs.Levels
 {
@@ -16,12 +17,11 @@ namespace test_raylibs.Levels
 
         public string currentLevel = Program.currentLevel;
 
-
         StartStats startStats = new StartStats();
+        GuiEndLevel guiEndLevel = new GuiEndLevel();
 
         public float levelLenght;
         public float pourcentage = 0;
-
 
 
         //charge les object du nivaux
@@ -43,7 +43,7 @@ namespace test_raylibs.Levels
                     case "SpikeFlat": Blocks.Add(new SpikeFlat(block.x, block.y)); break;
                     case "Ground": Blocks.Add(new Ground(block.x, block.y)); break;
                     case "EndLevel": Blocks.Add(new EndLevel(block.x, block.y));
-                        levelLenght = block.x;
+                        levelLenght = block.x -80;
                         break;
                 }
             }
@@ -67,7 +67,6 @@ namespace test_raylibs.Levels
                 {
                     if (Raylib.CheckCollisionRecs(player.GetDeathZone(), endLevel.GetRect()))
                     {
-                        Console.WriteLine("Level completed");
                         player.LevelCompleted();
                     }
                     continue;
@@ -112,9 +111,16 @@ namespace test_raylibs.Levels
         public void Draw()
         {
             startStats.Draw();
+
             foreach (var block in Blocks)
             {
                 block.Draw();
+            }
+
+            if (pourcentage >= 100)
+            {
+                Console.WriteLine("Plus de 100");
+                guiEndLevel.Draw();
             }
         }
     }

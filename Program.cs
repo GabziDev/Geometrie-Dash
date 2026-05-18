@@ -2,6 +2,7 @@
 using System.Numerics;
 using System.Text.Json;
 using test_raylibs;
+using test_raylibs.Composant;
 using test_raylibs.Enum;
 using test_raylibs.Levels;
 using test_raylibs.Model;
@@ -25,7 +26,7 @@ class Program
 
         //joueur
         Player player = new Player();
-        player.Position = new Vector2(100, 730);
+        player.Position = new Vector2(000, 730);
         
         //camera
         Camera2D cam = new Camera2D();
@@ -88,7 +89,6 @@ class Program
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Program.bgColor);
 
-
             if (scene == Scene.Menu)
             {
                 menuScene.Draw();
@@ -105,6 +105,11 @@ class Program
                 level.Draw();
                 Raylib.EndMode2D();
                 progressBar.Draw(level.GetPourcentage());
+                if (level.GetPourcentage() >= 5)
+                {
+                    GuiEndLevel guiEndLevel = new GuiEndLevel();
+                    guiEndLevel.Draw();
+                }
             }
 
             Raylib.EndDrawing();
