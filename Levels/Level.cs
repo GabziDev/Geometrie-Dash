@@ -27,8 +27,11 @@ namespace test_raylibs.Levels
         //charge les object du nivaux
         public void Load(string level)
         {
+            Blocks.Clear();
+            pourcentage = 0;
+
             string text = File.ReadAllText(@"./Data/" + level + ".json");
-            
+            Program.inGame = true;
 
             var levelData = JsonSerializer.Deserialize<LevelData>(text);
             string stringColor = levelData.bgColor;
@@ -42,8 +45,12 @@ namespace test_raylibs.Levels
                     case "SquareBlock": Blocks.Add(new SquareBlock(block.x, block.y)); break;
                     case "SpikeFlat": Blocks.Add(new SpikeFlat(block.x, block.y)); break;
                     case "Ground": Blocks.Add(new Ground(block.x, block.y)); break;
+                    case "JumpOrbes": Blocks.Add(new JumpOrbes(block.x, block.y)); break;
                     case "EndLevel": Blocks.Add(new EndLevel(block.x, block.y));
                         levelLenght = block.x -80;
+                        break;
+                    default:
+                        throw new Exception("Erreur : Format de nivaux invalide");
                         break;
                 }
             }
@@ -72,23 +79,32 @@ namespace test_raylibs.Levels
                     continue;
                 }
 
-                if (Raylib.CheckCollisionRecs(player.GetDeathZone(), block.GetRect()))
+                if (block is not JumpOrbes jumpOrbes)
                 {
-                    player.Death();
+                    if (Raylib.CheckCollisionRecs(player.GetDeathZone(), block.GetRect()))
+                    {
+                        player.Death();
+                    }
                 }
-
 
                 Rectangle blockRect = block.GetRect();
 
                 if (Raylib.CheckCollisionRecs(player.GetRect(), blockRect))
                 {
-                    if (player.Velocity.Y < 0)
+                    if (block is JumpOrbes)
                     {
-                        player.Position.Y = blockRect.Y - player.GetRect().Height;
-
-                        player.Velocity.Y = 0;
-
                         player.isGrounded = true;
+                    }
+                    else
+                    {
+                        if (player.Velocity.Y < 0)
+                        {
+                            player.Position.Y = blockRect.Y - player.GetRect().Height;
+
+                            player.Velocity.Y = 0;
+
+                            player.isGrounded = true;
+                        }
                     }
                 }
 
@@ -117,9 +133,9 @@ namespace test_raylibs.Levels
                 block.Draw();
             }
 
-            if (pourcentage >= 100)
+
+            if (GetPourcentage() >= 100)
             {
-                Console.WriteLine("Plus de 100");
                 guiEndLevel.Draw();
             }
         }

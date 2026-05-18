@@ -8,6 +8,22 @@ namespace test_raylibs.Composant
     public class GuiEndLevel
     {
 
+        public Button btnReplay = new Button(Program.SCREEN_WITDH /2, Program.SCREEN_HEIGHT /2,Color.Blue, "menu");
+        public Button btnMenu = new Button(Program.SCREEN_WITDH / 2 + 100, Program.SCREEN_HEIGHT / 2, Color.Blue, "replay");
+
+        public string Update()
+        {
+            if (btnReplay.IsClicked())
+            {
+                return btnReplay.link;
+            }
+            else if (btnMenu.IsClicked())
+            {
+                return btnMenu.link;
+            }
+            return null;
+        }
+
         public void Draw()
         {
             int modalWidth = Program.SCREEN_WITDH / 2;
@@ -18,6 +34,8 @@ namespace test_raylibs.Composant
 
             Raylib.DrawRectangle(modalX, modalY, modalWidth, modalHeight, Color.Green);
             Raylib.DrawText("Level Completed", modalX + modalX / 2, modalY + modalY / 2, 40,Color.Black);
+
+            btnReplay.Draw();
         }
 
     }

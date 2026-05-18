@@ -19,6 +19,9 @@ class Program
     public const int SCREEN_WITDH = 1920;
     public const int SCREEN_HEIGHT = 1080;
 
+    public static bool debug = true;
+    public static bool inGame = false;
+
     public static bool running = true;
 
     static void Main()
@@ -42,6 +45,9 @@ class Program
         Scene scene = Scene.Menu;
         MenuScene menuScene = new MenuScene();
 
+        //temp
+        GuiEndLevel guiEndLevel = new GuiEndLevel();
+
         //load windows
         Raylib.InitWindow(SCREEN_WITDH, SCREEN_HEIGHT, "Géometrie dash");
         Raylib.SetExitKey(KeyboardKey.Null);
@@ -59,8 +65,10 @@ class Program
 
                 if (result != null)
                 {
+                    player.Position = new Vector2(000, 730);
                     level.Load(result);
                     scene = Enum.Parse<Scene>(result);
+                    player.StartLevel();
                 }
             }
             else
@@ -69,9 +77,26 @@ class Program
                 cam.Target.X = player.Position.X;
             }
 
-            if (Raylib.IsKeyDown(KeyboardKey.A))
+            if (level.GetPourcentage() >= 100)
             {
-                cam.Rotation--;
+
+                string result = guiEndLevel.Update();
+
+
+                if (result != null)
+                {
+                    if (result == "menu")
+                    {
+                        scene = Scene.Menu;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Restart");
+                        player.StartLevel();
+                        level.Load(result);
+                        scene = Enum.Parse<Scene>(result);
+                    }
+                }
             }
 
             player.isGrounded = false;
@@ -83,7 +108,6 @@ class Program
                 GameManager.SaveGame();
                 GameManager.QuitGame();
             }
-
 
             //DRAW
             Raylib.BeginDrawing();
@@ -100,15 +124,16 @@ class Program
                     debug.Draw();
                 }
                 Raylib.BeginMode2D(cam);
+                level.Draw();
                 player.Draw();
                 level.Update(player);
-                level.Draw();
                 Raylib.EndMode2D();
                 progressBar.Draw(level.GetPourcentage());
-                if (level.GetPourcentage() >= 5)
+
+                if (level.GetPourcentage() >= 100)
                 {
-                    GuiEndLevel guiEndLevel = new GuiEndLevel();
                     guiEndLevel.Draw();
+                    guiEndLevel.Update();
                 }
             }
 

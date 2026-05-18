@@ -40,10 +40,15 @@ namespace test_raylibs.Obstactle
             Vector2 pos2 = new Vector2(Rect.X + Rect.Width / 2f, Rect.Y);
             Vector2 pos3 = new Vector2(Rect.X + Rect.Width, Rect.Y + Rect.Height);
             Raylib.DrawTriangle(pos3, pos2, pos1, Color.Black);
+            Raylib.DrawLine((int)pos1.X, (int)pos1.Y, (int)pos2.X, (int)pos2.Y, Color.Red);
 
             // Hitbox debug
-            Raylib.DrawRectangleRec(_hitbox, new Color(255, 0, 0, 120));
-            Raylib.DrawRectangleLinesEx(_hitbox, 2, Color.Red);
+            if (Program.debug)
+            {
+                Raylib.DrawRectangleRec(_hitbox, new Color(255, 0, 0, 120));
+                Raylib.DrawRectangleLinesEx(_hitbox, 2, Color.Red);
+            }
+            
         }
     }
 }

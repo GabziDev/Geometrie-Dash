@@ -1,8 +1,5 @@
 ﻿using Raylib_cs;
-using System;
-using System.Collections.Generic;
 using System.Numerics;
-using System.Text;
 
 namespace test_raylibs.Composant
 {
@@ -13,7 +10,13 @@ namespace test_raylibs.Composant
         public Color color;
         public string link;
 
-        Rectangle playButton = new Rectangle(360, Program.SCREEN_HEIGHT / 2, 80, 80);
+        public Button(int x, int y, Color color, string link)
+        {
+            this.x = x;
+            this.y = y;
+            this.color = color;
+            this.link = link;
+        }
 
         public bool IsClicked()
         {
@@ -24,20 +27,10 @@ namespace test_raylibs.Composant
                 && Raylib.IsMouseButtonPressed(MouseButton.Left);
         }
 
-        public Button(int x, int y, Color color, string link)
-        {
-            this.x = x;
-            this.y = y;
-            this.color = color;
-            this.link = link;
-        }
-
         public void Draw()
         {
-             Rectangle playButton = new Rectangle(y, Program.SCREEN_HEIGHT / 2, 80, 80);
+            Rectangle playButton = new Rectangle(x, y, 80, 80);
             Raylib.DrawRectangle(x, y, 80, 80, color);
-           // Raylib.DrawRectangleRec(playButton, color);
-
 
             Raylib.DrawTriangle(
                 new Vector2(playButton.X + 20, playButton.Y + 20),

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace test_raylibs
@@ -22,6 +23,11 @@ namespace test_raylibs
         public Rectangle GetRect()
         {
             return new Rectangle (Position.X, Position.Y, Seize, Seize);
+        }
+
+        public Rectangle GetDisplay()
+        {
+            return new Rectangle(Position.X, Position.Y, Seize, Seize);
         }
 
         public Rectangle GetDeathZone()
@@ -57,6 +63,14 @@ namespace test_raylibs
             moveSpeed = 0;
             levelCompleted = true;
             isGrounded = false;
+            Program.inGame = false;
+        }
+
+        public void StartLevel()
+        {
+            moveSpeed = 250;
+            levelCompleted = false;
+            isGrounded = true;
         }
 
         public void Death()
@@ -67,8 +81,7 @@ namespace test_raylibs
 
         public void Draw()
         {
-            Raylib.DrawRectangleRec(GetRect(), Color.Blue);
-            Raylib.DrawRectangle((int)Position.X + 8, (int)Position.Y + 2, 70, 70, Color.Blue);
+           Raylib.DrawRectangleRec(GetDisplay(), Color.Blue);
         }
     }
 }
