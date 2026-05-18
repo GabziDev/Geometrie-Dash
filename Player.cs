@@ -68,6 +68,7 @@ namespace test_raylibs
 
         public void StartLevel()
         {
+            Position = new Vector2(000, 730);
             moveSpeed = 250;
             levelCompleted = false;
             isGrounded = true;

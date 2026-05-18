@@ -12,7 +12,7 @@ namespace test_raylibs.Tool
 
         public void Draw(float pourcentage)
         {
-            int maxSize = Program.SCREEN_WITDH - 400;
+            int maxSize = Program.SCREEN_WIDTH - 400;
 
 
             //bordure

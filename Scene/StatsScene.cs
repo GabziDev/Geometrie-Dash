@@ -9,7 +9,7 @@ namespace test_raylibs.Scene
 {
     public class StatsScene
     {
-        static float w = Program.SCREEN_WITDH;
+        static float w = Program.SCREEN_WIDTH;
         static float h = Program.SCREEN_HEIGHT;
 
         public void Draw()

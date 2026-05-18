@@ -11,7 +11,7 @@ namespace test_raylibs.Tool
         public void Draw()
         {
             Raylib.DrawText("FPS : " + Raylib.GetFPS(), 50, 50, 40, Color.Black);
-            Raylib.DrawText("Résolution : " + Program.SCREEN_WITDH + " x " + Program.SCREEN_HEIGHT, 50, 100, 20, Color.Black);
+            Raylib.DrawText("Résolution : " + Program.SCREEN_WIDTH + " x " + Program.SCREEN_HEIGHT, 50, 100, 20, Color.Black);
         }
     }
 }

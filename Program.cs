@@ -16,7 +16,7 @@ class Program
     public static string currentLevel = "menu";
     public static Color bgColor = Color.White;
 
-    public const int SCREEN_WITDH = 1920;
+    public const int SCREEN_WIDTH = 1920;
     public const int SCREEN_HEIGHT = 1080;
 
     public static bool debug = true;
@@ -34,7 +34,7 @@ class Program
         //camera
         Camera2D cam = new Camera2D();
         cam.Target = new Vector2(player.Position.X, player.Position.Y - 150);
-        cam.Offset = new Vector2(SCREEN_WITDH / 3f, SCREEN_HEIGHT / 2f);
+        cam.Offset = new Vector2(SCREEN_WIDTH / 3f, SCREEN_HEIGHT / 2f);
         cam.Zoom = 1f;
 
         //level 
@@ -49,7 +49,7 @@ class Program
         GuiEndLevel guiEndLevel = new GuiEndLevel();
 
         //load windows
-        Raylib.InitWindow(SCREEN_WITDH, SCREEN_HEIGHT, "Géometrie dash");
+        Raylib.InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Géometrie dash");
         Raylib.SetExitKey(KeyboardKey.Null);
         Raylib.SetTargetFPS(120);
 
@@ -63,9 +63,12 @@ class Program
             {
                 string result = menuScene.Update();
 
-                if (result != null)
+                if (result == "Menu" || result == "Shop" || result == "Stats")
                 {
-                    player.Position = new Vector2(000, 730);
+                    scene = Enum.Parse<Scene>(result);
+                }
+                else if (result != null)
+                {
                     level.Load(result);
                     scene = Enum.Parse<Scene>(result);
                     player.StartLevel();
@@ -74,7 +77,6 @@ class Program
             else
             {
                 player.Update(dt);
-                cam.Target.X = player.Position.X;
             }
 
             if (level.GetPourcentage() >= 100)
@@ -126,7 +128,7 @@ class Program
                 Raylib.BeginMode2D(cam);
                 level.Draw();
                 player.Draw();
-                level.Update(player);
+                level.Update(player, ref cam);
                 Raylib.EndMode2D();
                 progressBar.Draw(level.GetPourcentage());
 

@@ -9,7 +9,7 @@ namespace test_raylibs.Scene
 {
     public class MenuScene
     {
-        static float w = Program.SCREEN_WITDH;
+        static float w = Program.SCREEN_WIDTH;
         static float h = Program.SCREEN_HEIGHT;
 
         Button btnSkin = new Button(Convert.ToInt32(w * 1f / 6f), (int)h /2, Color.Brown, "aaa");

@@ -20,7 +20,7 @@ namespace test_raylibs.Levels
         StartStats startStats = new StartStats();
         GuiEndLevel guiEndLevel = new GuiEndLevel();
 
-        public float levelLenght;
+        public float levelLength;
         public float pourcentage = 0;
 
 
@@ -47,7 +47,7 @@ namespace test_raylibs.Levels
                     case "Ground": Blocks.Add(new Ground(block.x, block.y)); break;
                     case "JumpOrbes": Blocks.Add(new JumpOrbes(block.x, block.y)); break;
                     case "EndLevel": Blocks.Add(new EndLevel(block.x, block.y));
-                        levelLenght = block.x -80;
+                        levelLength = block.x -80;
                         break;
                     default:
                         throw new Exception("Erreur : Format de nivaux invalide");
@@ -56,8 +56,17 @@ namespace test_raylibs.Levels
             }
         }
 
-        public void Update(Player player)
+        public void Update(Player player, ref Camera2D cam)
         {
+            if (player.Position.X >= levelLength - Program.SCREEN_WIDTH / 2)
+            {
+                cam.Target = new Vector2(levelLength - Program.SCREEN_WIDTH / 2, cam.Target.Y);
+            }
+            else
+            {
+                cam.Target = new Vector2(player.Position.X, 630);
+            }
+
             foreach (var block in Blocks)
             {
                 if (block is Spike spike)
@@ -119,7 +128,7 @@ namespace test_raylibs.Levels
 
         public float GetLevelPourcentage(Player player)
         {
-            float raw = (player.Position.X / levelLenght) * 100f;
+            float raw = (player.Position.X / levelLength) * 100f;
             return Math.Clamp(raw, 0f, 100f);
         }
 
