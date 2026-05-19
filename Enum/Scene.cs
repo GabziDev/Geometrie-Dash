@@ -9,6 +9,7 @@ namespace test_raylibs.Enum
         Menu,
         Stats,
         Shop,
+        Setting,
         LevelDebug,
         Level_1
     }

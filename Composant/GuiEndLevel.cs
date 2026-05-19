@@ -1,43 +1,38 @@
-﻿using Raylib_cs;
+﻿// GuiEndLevel.cs
+using Raylib_cs;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace test_raylibs.Composant
 {
     public class GuiEndLevel
     {
+        private int modalWidth = Program.SCREEN_WIDTH / 2;
+        private int modalHeight = Program.SCREEN_HEIGHT / 2;
+        private int modalX => (Program.SCREEN_WIDTH - modalWidth) / 2;
+        private int modalY => (Program.SCREEN_HEIGHT - modalHeight) / 2;
 
-        public Button btnReplay = new Button(Program.SCREEN_WIDTH /2, Program.SCREEN_HEIGHT /2,Color.Blue, "menu");
-        public Button btnMenu = new Button(Program.SCREEN_WIDTH / 2 + 100, Program.SCREEN_HEIGHT / 2, Color.Blue, "replay");
+        public Button btnMenu = new Button(Program.SCREEN_WIDTH / 2 - 90, Program.SCREEN_HEIGHT / 2 + 40, Color.DarkBlue, "menu", "Menu");
+        public Button btnReplay = new Button(Program.SCREEN_WIDTH / 2 + 90, Program.SCREEN_HEIGHT / 2 + 40, Color.DarkGreen, "LevelDebug", "Rejouer");
 
         public string Update()
         {
-            if (btnReplay.IsClicked())
-            {
-                return btnReplay.link;
-            }
-            else if (btnMenu.IsClicked())
-            {
-                return btnMenu.link;
-            }
+            if (btnReplay.IsClicked()) return btnReplay.link;
+            if (btnMenu.IsClicked()) return btnMenu.link;
             return null;
         }
 
         public void Draw()
         {
-            int modalWidth = Program.SCREEN_WIDTH / 2;
-            int modalHeight = Program.SCREEN_HEIGHT / 2;
-
-            int modalX = (Program.SCREEN_WIDTH - modalWidth) / 2;
-            int modalY = (Program.SCREEN_HEIGHT - modalHeight) / 2;
-
-            Raylib.DrawRectangle(modalX -2, modalY - 2, modalWidth + 4, modalHeight + 4, Color.Black);
+            Raylib.DrawRectangle(modalX - 2, modalY - 2, modalWidth + 4, modalHeight + 4, Color.Black);
             Raylib.DrawRectangle(modalX, modalY, modalWidth, modalHeight, Color.Green);
-            Raylib.DrawText("Level Completed", modalX + modalX / 2, modalY + modalY / 2, 40,Color.Black);
 
+            string title = "Level Completed!";
+            int fontSize = 40;
+            int titleW = Raylib.MeasureText(title, fontSize);
+            Raylib.DrawText(title, modalX + (modalWidth - titleW) / 2, modalY + 40, fontSize, Color.Black);
+
+            btnMenu.Draw();
             btnReplay.Draw();
         }
-
     }
 }

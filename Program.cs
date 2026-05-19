@@ -63,7 +63,7 @@ class Program
             {
                 string result = menuScene.Update();
 
-                if (result == "Menu" || result == "Shop" || result == "Stats")
+                if (result == "Menu" || result == "Shop" || result == "Stats" || result == "Setting")
                 {
                     scene = Enum.Parse<Scene>(result);
                 }
@@ -83,16 +83,18 @@ class Program
             {
 
                 string result = guiEndLevel.Update();
-
-
+                
                 if (result != null)
                 {
+                    Console.WriteLine(result);
+
                     if (result == "menu")
                     {
                         scene = Scene.Menu;
                     }
                     else
                     {
+                        scene = Scene.LevelDebug;
                         Console.WriteLine("Restart");
                         player.StartLevel();
                         level.Load(result);
