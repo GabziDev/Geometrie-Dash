@@ -14,13 +14,11 @@ namespace test_raylibs.Tool
         {
             int maxSize = Program.SCREEN_WIDTH - 400;
 
-
             //bordure
             Raylib.DrawRectangle((int)(Program.SCREEN_HEIGHT * 0.25), (int)(Program.SCREEN_HEIGHT * 0.05), maxSize + 4, 20, Color.Black);
 
             //sous bar
             Raylib.DrawRectangle((int)(Program.SCREEN_HEIGHT * 0.25) + 2, (int)(Program.SCREEN_HEIGHT * 0.05) + 2, maxSize, 16, Color.Brown);
-
 
             //porcentage
             int progressWidth = (int)(maxSize * (pourcentage / 100f));

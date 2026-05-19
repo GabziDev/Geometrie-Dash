@@ -5,10 +5,13 @@ using System.Numerics;
 using System.Reflection;
 using System.Text;
 using test_raylibs.Composant;
+using test_raylibs.Interface;
+using test_raylibs.Levels;
+using test_raylibs.Services;
 
 namespace test_raylibs.Scene
 {
-    public class MenuScene
+    public class MenuScene : IScene
     {
         static float w = Program.SCREEN_WIDTH;
         static float h = Program.SCREEN_HEIGHT;
@@ -18,14 +21,17 @@ namespace test_raylibs.Scene
         Button btnPlay = new Button((int)(w * 3f / 5f), (int)(h / 2f), Color.Brown, "LevelDebug", "Play");
         Button btnStats = new Button((int)(w * 4f / 5f), (int)(h / 2f), Color.Brown, "Stats", "Stats");
 
-        public string Update()
+        public void Update(float dt)
         {
             if (btnPlay.IsClicked())
-            { 
-                return btnPlay.link; 
+            {
+                SceneManager.SetScene(new GameScene(btnPlay.link));
             }
+
+            /*
             else if (btnShop.IsClicked())
             {
+                SceneManager.SetScene(new GameScene(btnPlay.link));
                 return btnShop.link;
             }
             else if (btnSetting.IsClicked())
@@ -36,7 +42,7 @@ namespace test_raylibs.Scene
             {
                 return btnStats.link;
             }
-            return null;
+            */
         }
 
         public void Draw()

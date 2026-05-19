@@ -22,12 +22,12 @@ namespace test_raylibs
 
         public Rectangle GetRect()
         {
-            return new Rectangle (Position.X, Position.Y, Seize, Seize);
+            return new Rectangle (Position.X , Position.Y, Seize, Seize);
         }
 
         public Rectangle GetDisplay()
         {
-            return new Rectangle(Position.X, Position.Y, Seize, Seize);
+            return new Rectangle (Position.X, Position.Y, Seize, Seize);
         }
 
         public Rectangle GetDeathZone()
@@ -43,7 +43,6 @@ namespace test_raylibs
             Position.X += moveSpeed * dt;
 
             int groundY = 730;
-
 
             if (Position.Y >= groundY)
             {

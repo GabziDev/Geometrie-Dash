@@ -24,88 +24,26 @@ class Program
 
     public static bool running = true;
 
+    public static Player player = new Player();
+    public static Level level = new Level();
+
     static void Main()
     {
-
-        //joueur
-        Player player = new Player();
         player.Position = new Vector2(000, 730);
         
-        //camera
-        Camera2D cam = new Camera2D();
-        cam.Target = new Vector2(player.Position.X, player.Position.Y - 150);
-        cam.Offset = new Vector2(SCREEN_WIDTH / 3f, SCREEN_HEIGHT / 2f);
-        cam.Zoom = 1f;
-
-        //level 
-        Level level = new Level();
-        Debug debug = new Debug();
-        ProgressBar progressBar = new ProgressBar();
-
-        Scene scene = Scene.Menu;
-        MenuScene menuScene = new MenuScene();
-
-        //temp
-        GuiEndLevel guiEndLevel = new GuiEndLevel();
-
-        //load windows
         Raylib.InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Géometrie dash");
         Raylib.SetExitKey(KeyboardKey.Null);
         Raylib.SetTargetFPS(120);
 
-        // -- BOUCLE -- //
+        SceneManager.SetScene(new MenuScene());
+
         while (Program.running)
         {
             float dt = Raylib.GetFrameTime();
 
-            //logique du menu
-            if (scene == Scene.Menu)
-            {
-                string result = menuScene.Update();
+            SceneManager.Update(dt);
 
-                if (result == "Menu" || result == "Shop" || result == "Stats" || result == "Setting")
-                {
-                    scene = Enum.Parse<Scene>(result);
-                }
-                else if (result != null)
-                {
-                    level.Load(result);
-                    scene = Enum.Parse<Scene>(result);
-                    player.StartLevel();
-                }
-            }
-            else
-            {
-                player.Update(dt);
-            }
-
-            if (level.GetPourcentage() >= 100)
-            {
-
-                string result = guiEndLevel.Update();
-                
-                if (result != null)
-                {
-                    Console.WriteLine(result);
-
-                    if (result == "menu")
-                    {
-                        scene = Scene.Menu;
-                    }
-                    else
-                    {
-                        scene = Scene.LevelDebug;
-                        Console.WriteLine("Restart");
-                        player.StartLevel();
-                        level.Load(result);
-                        scene = Enum.Parse<Scene>(result);
-                    }
-                }
-            }
-
-            player.isGrounded = false;
-
-            //SAVE
+           //Save
             if (Raylib.IsKeyPressed(KeyboardKey.Escape))
             {
                 Console.WriteLine("Saving...");
@@ -113,34 +51,10 @@ class Program
                 GameManager.QuitGame();
             }
 
-            //DRAW
+            //Draw
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Program.bgColor);
-
-            if (scene == Scene.Menu)
-            {
-                menuScene.Draw();
-            }
-            else
-            {
-                if (Raylib.IsKeyDown(KeyboardKey.Q))
-                {
-                    debug.Draw();
-                }
-                Raylib.BeginMode2D(cam);
-                level.Draw();
-                player.Draw();
-                level.Update(player, ref cam);
-                Raylib.EndMode2D();
-                progressBar.Draw(level.GetPourcentage());
-
-                if (level.GetPourcentage() >= 100)
-                {
-                    guiEndLevel.Draw();
-                    guiEndLevel.Update();
-                }
-            }
-
+            SceneManager.Draw();
             Raylib.EndDrawing();
 
             if (GameManager.shouldQuit || Raylib.WindowShouldClose())
