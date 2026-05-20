@@ -1,0 +1,25 @@
+﻿{
+  "maxPercentage": 0,
+  "finished": false,
+  "levelLength": 3700,
+  "bgColor": "63B0A6",
+  "data": {
+    "blocks": [
+      {
+        "type": "Spike",
+        "x": 500,
+        "y": 730
+      },
+      {
+        "type": "Ground",
+        "x": -1000,
+        "y": 810
+      },
+      {
+        "type": "EndLevel",
+        "x": 3700,
+        "y": -1000
+      }
+    ]
+  }
+}

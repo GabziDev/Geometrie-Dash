@@ -12,7 +12,7 @@ namespace test_raylibs.Composant
         private int modalY => (Program.SCREEN_HEIGHT - modalHeight) / 2;
 
         public Button btnMenu = new Button(Program.SCREEN_WIDTH / 2 - 90, Program.SCREEN_HEIGHT / 2 + 40, Color.DarkBlue, "menu", "Menu");
-        public Button btnReplay = new Button(Program.SCREEN_WIDTH / 2 + 90, Program.SCREEN_HEIGHT / 2 + 40, Color.DarkGreen, "LevelDebug", "Rejouer");
+        public Button btnReplay = new Button(Program.SCREEN_WIDTH / 2 + 90, Program.SCREEN_HEIGHT / 2 + 40, Color.DarkGreen, "Level_1", "Rejouer");
 
         public string Update()
         {
