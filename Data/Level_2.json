@@ -11,6 +11,21 @@
         "y": 730
       },
       {
+        "type": "SpikeFlat",
+        "x": 580,
+        "y": 770
+      },
+      {
+        "type": "JumpOrbes",
+        "x": 580,
+        "y": 650
+      },
+      {
+        "type": "JumpPad",
+        "x": 420,
+        "y": 730
+      },
+      {
         "type": "Ground",
         "x": -1000,
         "y": 810

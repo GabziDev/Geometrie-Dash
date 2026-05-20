@@ -5,9 +5,9 @@ using System.Text;
 
 namespace test_raylibs.Obstactle
 {
-    public class JumpOrbes : Obstacle
+    public class JumpPad : Obstacle
     {
-        public JumpOrbes(int x, int y) : base(x, y, 80, 80) { 
+        public JumpPad(int x, int y) : base(x, y, 80, 80) { 
 
         }
 
@@ -18,9 +18,7 @@ namespace test_raylibs.Obstactle
 
         public override void Draw()
         {
-            Raylib.DrawCircle((int)Rect.X, (int)Rect.Y, 20, Color.Yellow);
-            Raylib.DrawCircle((int)Rect.X, (int)Rect.Y, 15, Program.bgColor);
-            Raylib.DrawCircle((int)Rect.X, (int)Rect.Y, 10, Color.Yellow);
+            Raylib.DrawCircle((int)Rect.X, (int)Rect.Y +80, 20, Color.Yellow);
         }
     }
 }

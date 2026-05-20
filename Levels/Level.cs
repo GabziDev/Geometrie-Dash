@@ -46,6 +46,7 @@ namespace test_raylibs.Levels
                     case "SpikeFlat": Blocks.Add(new SpikeFlat(block.x, block.y)); break;
                     case "Ground": Blocks.Add(new Ground(block.x, block.y)); break;
                     case "JumpOrbes": Blocks.Add(new JumpOrbes(block.x, block.y)); break;
+                    case "JumpPad": Blocks.Add(new JumpPad(block.x, block.y)); break;
                     case "EndLevel": Blocks.Add(new EndLevel(block.x, block.y));
                         levelLength = block.x -80;
                         break;
@@ -74,6 +75,25 @@ namespace test_raylibs.Levels
                     if (Raylib.CheckCollisionRecs(player.GetDeathZone(), spike.GetHitbox()))
                     {
                         player.Death();
+                    }
+                    continue;
+                }
+
+                if (block is SpikeFlat spikeFlat)
+                {
+                    if (Raylib.CheckCollisionRecs(player.GetDeathZone(), spikeFlat.GetHitbox()))
+                    {
+                        player.Death();
+                    }
+                    continue;
+                }
+
+                if (block is JumpPad jumpPad)
+                {
+                    if (Raylib.CheckCollisionRecs(player.GetRect(), jumpPad.GetRect()))
+                    {
+                        Console.WriteLine("aaa");
+                        player.Velocity.Y = 700;
                     }
                     continue;
                 }
