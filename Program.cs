@@ -12,7 +12,9 @@ using test_raylibs.Tool;
 
 class Program
 {
-    public static int attemps;
+    public static int attemps = 1;
+    public static int jump;
+
     public static string currentLevel = "menu";
     public static Color bgColor = Color.White;
 

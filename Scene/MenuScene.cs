@@ -48,7 +48,7 @@ namespace test_raylibs.Scene
             }
             else if (btnStats.IsClicked())
             {
-                SceneManager.SetScene(new GameScene(btnStats.link));
+                SceneManager.SetScene(new StatsScene());
             }
         }
 

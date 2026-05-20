@@ -54,6 +54,7 @@ namespace test_raylibs
             if (Raylib.IsKeyDown(KeyboardKey.Space) && isGrounded && !levelCompleted)
             {
                 Velocity.Y = 700;
+                Program.jump++;
             }
         }
 

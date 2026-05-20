@@ -15,12 +15,18 @@ namespace test_raylibs.Services
             string json = File.ReadAllText(@"./Data/Player.json");
             PlayerData player = JsonSerializer.Deserialize<PlayerData>(json);
 
-            player.attemps += Program.attemps;
+            Console.WriteLine("Attemp : " + Program.attemps);
+            Console.WriteLine("Jump : " + Program.jump);
 
+            player.attemps += Program.attemps;
+            player.jump += Program.jump;
 
             var options = new JsonSerializerOptions { WriteIndented = true };
 
             File.WriteAllText(@"./Data/Player.json", JsonSerializer.Serialize(player, options));
+
+            Program.attemps = 0;
+            Program.jump = 0;
 
             Console.WriteLine("Game saved");
         }
