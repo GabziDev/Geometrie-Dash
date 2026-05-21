@@ -52,7 +52,6 @@ namespace test_raylibs.Levels
                         break;
                     default:
                         throw new Exception("Erreur : Format de nivaux invalide");
-                        break;
                 }
             }
         }

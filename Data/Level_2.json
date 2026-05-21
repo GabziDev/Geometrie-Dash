@@ -17,12 +17,47 @@
       },
       {
         "type": "JumpOrbes",
+        "x": 1280,
+        "y": 570
+      },
+      {
+        "type": "Spike",
+        "x": 920,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1160,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 580,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
         "x": 580,
         "y": 650
       },
       {
         "type": "JumpPad",
         "x": 440,
+        "y": 730
+      },
+      {
+        "type": "Spike",
+        "x": 1240,
+        "y": 730
+      },
+      {
+        "type": "Spike",
+        "x": 1320,
+        "y": 730
+      },
+      {
+        "type": "Spike",
+        "x": 1400,
         "y": 730
       },
       {
