@@ -24,7 +24,7 @@ namespace test_raylibs.Tool
             int progressWidth = (int)(maxSize * (pourcentage / 100f));
             Raylib.DrawRectangle((int)(Program.SCREEN_HEIGHT * 0.25) + 2, (int)(Program.SCREEN_HEIGHT * 0.05) + 2, progressWidth, 16, Color.Red);
 
-            Raylib.DrawText(pourcentage + "%", Program.SCREEN_HEIGHT - 100, (int)(Program.SCREEN_HEIGHT * 0.05) + 50, 40, Color.Black);
+            Raylib.DrawText(Math.Round(pourcentage) + "%", Program.SCREEN_HEIGHT - 100, (int)(Program.SCREEN_HEIGHT * 0.05) + 50, 40, Color.Black);
         }
     }
 }

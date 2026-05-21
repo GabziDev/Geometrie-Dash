@@ -1,5 +1,4 @@
-﻿// Button.cs
-using Raylib_cs;
+﻿using Raylib_cs;
 using System.Numerics;
 
 namespace test_raylibs.Composant

@@ -63,6 +63,8 @@ namespace test_raylibs
             moveSpeed = 0;
             levelCompleted = true;
             isGrounded = false;
+            var xp = Position.X * 0.001;
+            Program.xp += (int)xp;
             Program.inGame = false;
         }
 
@@ -76,8 +78,10 @@ namespace test_raylibs
 
         public void Death()
         {
-           Position = new Vector2(0, 730);
-           Program.attemps++;
+            var xp = Position.X * 0.001;
+            Program.xp += (int)xp;
+            Program.attemps++;
+            Position = new Vector2(0, 730);
         }
 
         public void Draw()

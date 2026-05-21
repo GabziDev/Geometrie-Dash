@@ -18,9 +18,13 @@ namespace test_raylibs.Scene
         private Debug debug = new Debug();
         private Camera2D cam = new Camera2D();
 
+        public string levelName;
+
         public GameScene(string levelName)
         {
+            this.levelName = levelName;
             Program.level.Load(levelName);
+
             Program.player.StartLevel();
 
             cam.Target = new Vector2(Program.player.Position.X, Program.player.Position.Y - 150);
@@ -43,7 +47,7 @@ namespace test_raylibs.Scene
                 }
                 else if (result != null)
                 {
-                    SceneManager.SetScene(new GameScene(result));
+                    SceneManager.SetScene(new GameScene(levelName));
                 }
             }
         }

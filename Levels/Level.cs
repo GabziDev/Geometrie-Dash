@@ -92,13 +92,11 @@ namespace test_raylibs.Levels
                 {
                     if (Raylib.CheckCollisionRecs(player.GetRect(), jumpPad.GetRect()))
                     {
-                        Console.WriteLine("aaa");
                         player.Velocity.Y = 700;
                     }
                     continue;
                 }
 
-                //finishLevel
                 if (block is EndLevel endLevel)
                 {
                     if (Raylib.CheckCollisionRecs(player.GetDeathZone(), endLevel.GetRect()))
@@ -152,7 +150,6 @@ namespace test_raylibs.Levels
             return Math.Clamp(raw, 0f, 100f);
         }
 
-        //dessine
         public void Draw()
         {
             startStats.Draw();
@@ -161,7 +158,6 @@ namespace test_raylibs.Levels
             {
                 block.Draw();
             }
-
 
             if (GetPourcentage() >= 100)
             {

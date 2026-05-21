@@ -14,6 +14,7 @@ class Program
 {
     public static int attemps = 1;
     public static int jump;
+    public static int xp;
 
     public static string currentLevel = "menu";
     public static Color bgColor = Color.White;
@@ -21,7 +22,7 @@ class Program
     public const int SCREEN_WIDTH = 1920;
     public const int SCREEN_HEIGHT = 1080;
 
-    public static bool debug = true;
+    public static bool debug = false;
     public static bool inGame = false;
 
     public static bool running = true;

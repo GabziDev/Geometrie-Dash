@@ -8,6 +8,7 @@ using test_raylibs.Composant;
 using test_raylibs.Interface;
 using test_raylibs.Model;
 using test_raylibs.Obstactle;
+using test_raylibs.Services;
 
 namespace test_raylibs.Scene
 {
@@ -16,17 +17,24 @@ namespace test_raylibs.Scene
         static float w = Program.SCREEN_WIDTH;
         static float h = Program.SCREEN_HEIGHT;
 
+        Button btnBack = new Button((int)(w * 2f / 4f), (int)(h * 2f / 3f), Color.Brown, "menu", "Retour");
+
         static int totalJump;
         static int totalAttemps;
+        static int totalxp;
 
         public StatsScene()
         {
+            GameManager.SaveGame();
             LoadStats();
         }
 
         public void Update(float dt)
         {
-
+            if (btnBack.IsClicked())
+            {
+                SceneManager.SetScene(new MenuScene());
+            }
         }
 
         public static void LoadStats()
@@ -36,8 +44,7 @@ namespace test_raylibs.Scene
 
             totalJump = player.jump;
             totalAttemps = player.attemps;
-
-            Console.WriteLine("Statss");
+            totalxp = player.xp;
         }
 
         public void Draw()
@@ -54,6 +61,11 @@ namespace test_raylibs.Scene
             int attempW = Raylib.MeasureText(attemp, 20);
             Raylib.DrawText(attemp, (Program.SCREEN_WIDTH - attempW) / 2, Program.SCREEN_HEIGHT / 2 - 40, 20, Color.Black);
 
+            string xp = "Xp : " + totalxp;
+            int xpW = Raylib.MeasureText(xp, 20);
+            Raylib.DrawText(xp, (Program.SCREEN_WIDTH - xpW) / 2, Program.SCREEN_HEIGHT / 2 - 80, 20, Color.Black);
+
+            btnBack.Draw();
         }
     }
 }
