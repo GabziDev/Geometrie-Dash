@@ -1,8 +1,4 @@
 ﻿using Raylib_cs;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using test_raylibs;
 
 namespace test_raylibs.Tool
 {
@@ -12,19 +8,19 @@ namespace test_raylibs.Tool
 
         public void Draw(float pourcentage)
         {
-            int maxSize = Program.SCREEN_WIDTH - 400;
+            int maxSize = Constants.SCREEN_WIDTH - 400;
 
             //bordure
-            Raylib.DrawRectangle((int)(Program.SCREEN_HEIGHT * 0.25), (int)(Program.SCREEN_HEIGHT * 0.05), maxSize + 4, 20, Color.Black);
+            Raylib.DrawRectangle((int)(Constants.SCREEN_HEIGHT * 0.25), (int)(Constants.SCREEN_HEIGHT * 0.05), maxSize + 4, 20, Color.Black);
 
             //sous bar
-            Raylib.DrawRectangle((int)(Program.SCREEN_HEIGHT * 0.25) + 2, (int)(Program.SCREEN_HEIGHT * 0.05) + 2, maxSize, 16, Color.Brown);
+            Raylib.DrawRectangle((int)(Constants.SCREEN_HEIGHT * 0.25) + 2, (int)(Constants.SCREEN_HEIGHT * 0.05) + 2, maxSize, 16, Color.Brown);
 
             //porcentage
             int progressWidth = (int)(maxSize * (pourcentage / 100f));
-            Raylib.DrawRectangle((int)(Program.SCREEN_HEIGHT * 0.25) + 2, (int)(Program.SCREEN_HEIGHT * 0.05) + 2, progressWidth, 16, Color.Red);
+            Raylib.DrawRectangle((int)(Constants.SCREEN_HEIGHT * 0.25) + 2, (int)(Constants.SCREEN_HEIGHT * 0.05) + 2, progressWidth, 16, Color.Red);
 
-            Raylib.DrawText(Math.Round(pourcentage) + "%", Program.SCREEN_HEIGHT - 100, (int)(Program.SCREEN_HEIGHT * 0.05) + 50, 40, Color.Black);
+            Raylib.DrawText(Math.Round(pourcentage) + "%", Constants.SCREEN_HEIGHT - 100, (int)(Constants.SCREEN_HEIGHT * 0.05) + 50, 40, Color.Black);
         }
     }
 }

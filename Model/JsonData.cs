@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using test_raylibs.Levels;
+﻿using System.Text.Json.Serialization;
 
 namespace test_raylibs.Model
 {
     class JsonData
     {
-        public List<BlockData> blocks { get; set; }
+        [JsonPropertyName("blocks")]
+        public List<BlockData> Blocks { get; set; } = new List<BlockData>();
     }
 }

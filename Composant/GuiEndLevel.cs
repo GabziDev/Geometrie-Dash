@@ -6,15 +6,15 @@ namespace test_raylibs.Composant
 {
     public class GuiEndLevel
     {
-        private int modalWidth = Program.SCREEN_WIDTH / 2;
-        private int modalHeight = Program.SCREEN_HEIGHT / 2;
-        private int modalX => (Program.SCREEN_WIDTH - modalWidth) / 2;
-        private int modalY => (Program.SCREEN_HEIGHT - modalHeight) / 2;
+        private int modalWidth = Constants.SCREEN_WIDTH / 2;
+        private int modalHeight = Constants.SCREEN_HEIGHT / 2;
+        private int modalX => (Constants.SCREEN_WIDTH - modalWidth) / 2;
+        private int modalY => (Constants.SCREEN_HEIGHT - modalHeight) / 2;
 
-        public Button btnMenu = new Button(Program.SCREEN_WIDTH / 2 - 90, Program.SCREEN_HEIGHT / 2 + 40, Color.DarkBlue, "menu", "Menu");
-        public Button btnReplay = new Button(Program.SCREEN_WIDTH / 2 + 90, Program.SCREEN_HEIGHT / 2 + 40, Color.DarkGreen, "Level_1", "Rejouer");
+        public Button btnMenu = new Button(Constants.SCREEN_WIDTH / 2 - 90, Constants.SCREEN_HEIGHT / 2 + 40, Color.DarkBlue, "menu", "Menu");
+        public Button btnReplay = new Button(Constants.SCREEN_WIDTH / 2 + 90, Constants.SCREEN_HEIGHT / 2 + 40, Color.DarkGreen, "Level_1", "Rejouer");
 
-        public string Update()
+        public string? Update()
         {
             if (btnReplay.IsClicked()) return btnReplay.link;
             if (btnMenu.IsClicked()) return btnMenu.link;

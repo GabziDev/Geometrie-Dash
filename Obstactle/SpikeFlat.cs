@@ -1,5 +1,6 @@
 ﻿using Raylib_cs;
 using System.Numerics;
+using test_raylibs.Managers;
 
 namespace test_raylibs.Obstactle
 {
@@ -34,7 +35,7 @@ namespace test_raylibs.Obstactle
             Vector2 pos3 = new Vector2(Rect.X + Rect.Width, Rect.Y + Rect.Height);
             Raylib.DrawTriangle(pos3, pos2, pos1, Color.Black);
 
-            if (Program.debug)
+            if (GameManager.Instance.Debug)
             {
                 Raylib.DrawRectangleRec(_hitbox, new Color(255, 0, 0, 120));
             }

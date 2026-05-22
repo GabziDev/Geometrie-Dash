@@ -1,11 +1,8 @@
 ﻿using Raylib_cs;
-using System;
-using System.Collections.Generic;
 using System.Numerics;
-using System.Runtime.CompilerServices;
-using System.Text;
+using test_raylibs.Managers;
 
-namespace test_raylibs
+namespace test_raylibs.Entities
 {
     public class Player
     {
@@ -49,7 +46,7 @@ namespace test_raylibs
             if (Raylib.IsKeyDown(KeyboardKey.Space) && isGrounded && !levelCompleted)
             {
                 Velocity.Y = 700;
-                Program.jump++;
+                GameManager.Instance.Jump++;
             }
         }
 
@@ -59,12 +56,12 @@ namespace test_raylibs
             levelCompleted = true;
             isGrounded = false;
             var xp = Position.X * 0.001;
-            Program.xp += (int)xp;
+            GameManager.Instance.Xp += (int)xp;
         }
 
         public void StartLevel()
         {
-            Console.WriteLine(Program.bgColor);
+            Console.WriteLine(GameManager.Instance.BgColor);
             Position = new Vector2(000, 730);
             moveSpeed = 250;
             levelCompleted = false;
@@ -74,8 +71,8 @@ namespace test_raylibs
         public void Death()
         {
             var xp = Position.X * 0.001;
-            Program.xp += (int)xp;
-            Program.attemps++;
+            GameManager.Instance.Xp += (int)xp;
+            GameManager.Instance.Attempts++;
             Position = new Vector2(0, 730);
         }
 

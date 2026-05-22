@@ -1,6 +1,6 @@
 ﻿using Raylib_cs;
-using System;
 using System.Numerics;
+using test_raylibs.Managers;
 
 namespace test_raylibs.Obstactle
 {
@@ -43,7 +43,7 @@ namespace test_raylibs.Obstactle
             Raylib.DrawLine((int)pos1.X, (int)pos1.Y, (int)pos2.X, (int)pos2.Y, Color.Red);
 
             // hitbox debug
-            if (Program.debug)
+            if (GameManager.Instance.Debug)
             {
                 Raylib.DrawRectangleRec(_hitbox, new Color(255, 0, 0, 120));
             }

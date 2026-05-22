@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text.Json.Serialization;
 
 namespace test_raylibs.Model
 {
     public class PlayerData
     {
-        public int xp {  get; set; }
-        public int jump {  get; set; }
-        public int attemps { get; set; }
+        [JsonPropertyName("xp")]
+        public int Xp {  get; set; }
+
+        [JsonPropertyName("jump")]
+        public int Jump {  get; set; }
+
+        [JsonPropertyName("attempts")]
+        public int Attempts { get; set; }
     }
 }

@@ -1,11 +1,7 @@
 ﻿using Raylib_cs;
-using System;
-using System.Collections.Generic;
 using System.Numerics;
-using System.Text;
 using test_raylibs.Composant;
-using test_raylibs.Interface;
-using test_raylibs.Levels;
+using test_raylibs.Managers;
 using test_raylibs.Services;
 using test_raylibs.Tool;
 
@@ -23,24 +19,24 @@ namespace test_raylibs.Scene
         public GameScene(string levelName)
         {
             this.levelName = levelName;
-            Program.level.Load(levelName);
+            GameManager.Instance.Level.Load(levelName);
 
-            Program.player.StartLevel();
+            GameManager.Instance.Player.StartLevel();
 
-            cam.Target = new Vector2(Program.player.Position.X, Program.player.Position.Y - 150);
-            cam.Offset = new Vector2(Program.SCREEN_WIDTH / 3f, Program.SCREEN_HEIGHT / 2f);
+            cam.Target = new Vector2(GameManager.Instance.Player.Position.X, GameManager.Instance.Player.Position.Y - 150);
+            cam.Offset = new Vector2(Constants.SCREEN_WIDTH / 3f, Constants.SCREEN_HEIGHT / 2f);
             cam.Zoom = 1f;
         }
 
         public void Update(float dt)
         {
-            Program.player.isGrounded = false;
-            Program.level.Update(Program.player, ref cam);
-            Program.player.Update(dt);
+            GameManager.Instance.Player.isGrounded = false;
+            GameManager.Instance.Level.Update(GameManager.Instance.Player, ref cam);
+            GameManager.Instance.Player.Update(dt);
 
-            if (Program.level.GetPourcentage() >= 100)
+            if (GameManager.Instance.Level.GetPourcentage() >= 100)
             {
-                string result = guiEndLevel.Update();
+                string? result = guiEndLevel.Update();
                 if (result == "menu")
                 {
                     SceneManager.SetScene(new MenuScene());
@@ -60,13 +56,13 @@ namespace test_raylibs.Scene
             }
 
             Raylib.BeginMode2D(cam);
-            Program.level.Draw();
-            Program.player.Draw();
+            GameManager.Instance.Level.Draw();
+            GameManager.Instance.Player.Draw();
             Raylib.EndMode2D();
 
-            progressBar.Draw(Program.level.GetPourcentage());
+            progressBar.Draw(GameManager.Instance.Level.GetPourcentage());
 
-            if (Program.level.GetPourcentage() >= 100)
+            if (GameManager.Instance.Level.GetPourcentage() >= 100)
             {
                 guiEndLevel.Draw();
             }

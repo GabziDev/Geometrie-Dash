@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using test_raylibs.Levels;
+﻿using System.Text.Json.Serialization;
 
 namespace test_raylibs.Model
 {
     class LevelData
     {
-        public string bgColor {  get; set; }
-        public JsonData data { get; set; }
+        [JsonPropertyName("bgColor")]
+        public string? BgColor {  get; set; }
+
+        [JsonPropertyName("data")]
+        public JsonData Data { get; set; } = new();
     }
 }

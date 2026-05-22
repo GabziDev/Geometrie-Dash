@@ -1,8 +1,5 @@
 ﻿using Raylib_cs;
-using System;
-using System.Collections.Generic;
-using System.Numerics;
-using System.Text;
+using test_raylibs.Managers;
 
 namespace test_raylibs.Obstactle
 {
@@ -12,7 +9,7 @@ namespace test_raylibs.Obstactle
 
         public override void Draw()
         {
-            Raylib.DrawRectangle((int)Rect.X, (int)Rect.Y, 10000, 800, Program.bgColor);
+            Raylib.DrawRectangle((int)Rect.X, (int)Rect.Y, 10000, 800, GameManager.Instance.BgColor);
             Raylib.DrawRectangle((int)Rect.X, (int)Rect.Y, 10000, 800, Color.Black);
         }
     }
