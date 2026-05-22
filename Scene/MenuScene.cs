@@ -20,9 +20,7 @@ namespace test_raylibs.Scene
         Button btnPlayLevel2 = new Button((int)(w * 2f / 4f), (int)(h * 2f / 5f), Color.Brown, "Level_2", "Level 2");
         Button btnPlayLevel3 = new Button((int)(w * 3f / 4f), (int)(h * 2f / 5f), Color.Brown, "Level_3", "Level 3");
 
-        Button btnSetting = new Button((int)(w * 1f / 4f), (int)(h * 3f / 5f), Color.Brown, "Setting", "Setting");
-        Button btnShop = new Button((int)(w * 2f / 4f), (int)(h * 3f / 5f), Color.Brown, "Shop", "Shop");
-        Button btnStats = new Button((int)(w * 3f / 4f), (int)(h * 3f / 5f), Color.Brown, "Stats", "Stats");
+        Button btnStats = new Button((int)(w * 2f / 4f), (int)(h * 3f / 5f), Color.Brown, "Stats", "Stats");
 
         public void Update(float dt)
         {
@@ -37,14 +35,6 @@ namespace test_raylibs.Scene
             else if (btnPlayLevel3.IsClicked())
             {
                 SceneManager.SetScene(new GameScene(btnPlayLevel3.link));
-            }
-            else if (btnShop.IsClicked())
-            {
-                SceneManager.SetScene(new GameScene(btnShop.link));
-            }
-            else if (btnSetting.IsClicked())
-            {
-                SceneManager.SetScene(new GameScene(btnSetting.link));
             }
             else if (btnStats.IsClicked())
             {
@@ -65,8 +55,6 @@ namespace test_raylibs.Scene
             btnPlayLevel1.Draw();
             btnPlayLevel2.Draw();
             btnPlayLevel3.Draw();
-            btnSetting.Draw();
-            btnShop.Draw();
             btnStats.Draw();
         }
     }

@@ -7,7 +7,6 @@ namespace test_raylibs.Model
 {
     class LevelData
     {
-        public int levelLength {  get; set; }
         public string bgColor {  get; set; }
         public JsonData data { get; set; }
     }

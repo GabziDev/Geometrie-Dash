@@ -25,11 +25,6 @@ namespace test_raylibs
             return new Rectangle (Position.X , Position.Y, Seize, Seize);
         }
 
-        public Rectangle GetDisplay()
-        {
-            return new Rectangle (Position.X, Position.Y, Seize, Seize);
-        }
-
         public Rectangle GetDeathZone()
         {
             return new Rectangle(Position.X + 8, Position.Y + 2, 70, 70);
@@ -65,11 +60,11 @@ namespace test_raylibs
             isGrounded = false;
             var xp = Position.X * 0.001;
             Program.xp += (int)xp;
-            Program.inGame = false;
         }
 
         public void StartLevel()
         {
+            Console.WriteLine(Program.bgColor);
             Position = new Vector2(000, 730);
             moveSpeed = 250;
             levelCompleted = false;
@@ -86,7 +81,7 @@ namespace test_raylibs
 
         public void Draw()
         {
-           Raylib.DrawRectangleRec(GetDisplay(), Color.Blue);
+           Raylib.DrawRectangleRec(GetRect(), Color.Red);
         }
     }
 }

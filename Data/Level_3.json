@@ -1,151 +1,153 @@
 ﻿{
-  "bgColor": "FFFFFFFF",
+  "bgColor": "AB55A3",
   "data": {
     "blocks": [
       {
         "type": "Spike",
-        "x": 900,
+        "x": 360,
         "y": 730
       },
       {
         "type": "SquareBlock",
-        "x": 500,
+        "x": 680,
         "y": 730
       },
       {
         "type": "SquareBlock",
-        "x": 580,
+        "x": 760,
         "y": 730
       },
       {
         "type": "SquareBlock",
-        "x": 580,
+        "x": 760,
         "y": 650
+      },
+      {
+        "type": "Spike",
+        "x": 840,
+        "y": 730
+      },
+      {
+        "type": "Spike",
+        "x": 920,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1000,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1000,
+        "y": 650
+      },
+      {
+        "type": "Spike",
+        "x": 1080,
+        "y": 730
+      },
+      {
+        "type": "Spike",
+        "x": 1160,
+        "y": 730
+      },
+      {
+        "type": "Spike",
+        "x": 1240,
+        "y": 730
+      },
+      {
+        "type": "Spike",
+        "x": 1320,
+        "y": 730
+      },
+      {
+        "type": "JumpOrbes",
+        "x": 1240,
+        "y": 570
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1400,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1400,
+        "y": 650
+      },
+
+      {
+        "type": "Spike",
+        "x": 1480,
+        "y": 730
+      },
+
+      {
+        "type": "Spike",
+        "x": 1560,
+        "y": 730
+      },
+      {
+        "type": "Spike",
+        "x": 1640,
+        "y": 730
+      },
+      {
+        "type": "Spike",
+        "x": 1720,
+        "y": 730
+      },
+      {
+        "type": "JumpOrbes",
+        "x": 1640,
+        "y": 570
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1400,
+        "y": 730
+      },
+      {
+        "type": "SquareBlock",
+        "x": 1400,
+        "y": 650
+      },
+      {
+        "type": "JumpPad",
+        "x": 2020,
+        "y": 730
+      },
+      {
+        "type": "Spike",
+        "x": 2040,
+        "y": 730
+      },
+      {
+        "type": "SpikeFlat",
+        "x": 2120,
+        "y": 770
+      },
+      {
+        "type": "SquareBlock",
+        "x": 2200,
+        "y": 730
+      },
+      {
+        "type": "Spike",
+        "x": 2280,
+        "y": 730
+      },
+      {
+        "type": "SpikeFlat",
+        "x": 2360,
+        "y": 770
       },
       {
         "type": "Ground",
         "x": -1000,
         "y": 810
-      },
-      {
-        "type": "SquareBlock",
-        "x": 1220,
-        "y": 730
-      },
-      {
-        "type": "SquareBlock",
-        "x": 1300,
-        "y": 650
-      },
-      {
-        "type": "SquareBlock",
-        "x": 1300,
-        "y": 730
-      },
-      {
-        "type": "SquareBlock",
-        "x": 1380,
-        "y": 650
-      },
-      {
-        "type": "SquareBlock",
-        "x": 1380,
-        "y": 730
-      },
-      {
-        "type": "SquareBlock",
-        "x": 1460,
-        "y": 650
-      },
-      {
-        "type": "SquareBlock",
-        "x": 1460,
-        "y": 730
-      },
-      {
-        "type": "SquareBlock",
-        "x": 1540,
-        "y": 650
-      },
-      {
-        "type": "SquareBlock",
-        "x": 1540,
-        "y": 730
-      },
-      {
-        "type": "SquareBlock",
-        "x": 1700,
-        "y": 650
-      },
-      {
-        "type": "SquareBlock",
-        "x": 1780,
-        "y": 650
-      },
-      {
-        "type": "SquareBlock",
-        "x": 1860,
-        "y": 650
-      },
-      {
-        "type": "SquareBlock",
-        "x": 2020,
-        "y": 650
-      },
-      {
-        "type": "SquareBlock",
-        "x": 2020,
-        "y": 730
-      },
-      {
-        "type": "Spike",
-        "x": 2100,
-        "y": 730
-      },
-      {
-        "type": "Spike",
-        "x": 2180,
-        "y": 730
-      },
-      {
-        "type": "Spike",
-        "x": 2500,
-        "y": 730
-      },
-      {
-        "type": "SquareBlock",
-        "x": 2580,
-        "y": 730
-      },
-      {
-        "type": "SquareBlock",
-        "x": 2660,
-        "y": 730
-      },
-      {
-        "type": "SquareBlock",
-        "x": 2740,
-        "y": 730
-      },
-      {
-        "type": "SquareBlock",
-        "x": 2740,
-        "y": 650
-      },
-      {
-        "type": "Spike",
-        "x": 2820,
-        "y": 730
-      },
-      {
-        "type": "SquareBlock",
-        "x": 2900,
-        "y": 730
-      },
-      {
-        "type": "SquareBlock",
-        "x": 2900,
-        "y": 650
       },
       {
         "type": "EndLevel",

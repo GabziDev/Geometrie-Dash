@@ -31,7 +31,6 @@ namespace test_raylibs.Levels
             pourcentage = 0;
 
             string text = File.ReadAllText(@"./Data/" + level + ".json");
-            Program.inGame = true;
 
             var levelData = JsonSerializer.Deserialize<LevelData>(text);
             string stringColor = levelData.bgColor;

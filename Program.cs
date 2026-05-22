@@ -3,7 +3,6 @@ using System.Numerics;
 using System.Text.Json;
 using test_raylibs;
 using test_raylibs.Composant;
-using test_raylibs.Enum;
 using test_raylibs.Levels;
 using test_raylibs.Model;
 using test_raylibs.Scene;
@@ -23,12 +22,13 @@ class Program
     public const int SCREEN_HEIGHT = 1080;
 
     public static bool debug = false;
-    public static bool inGame = false;
 
     public static bool running = true;
 
     public static Player player = new Player();
     public static Level level = new Level();
+
+
 
     static void Main()
     {
@@ -46,7 +46,6 @@ class Program
 
             SceneManager.Update(dt);
 
-           //Save
             if (Raylib.IsKeyPressed(KeyboardKey.Escape))
             {
                 Console.WriteLine("Saving...");

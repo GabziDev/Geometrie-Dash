@@ -37,7 +37,6 @@ namespace test_raylibs.Obstactle
             if (Program.debug)
             {
                 Raylib.DrawRectangleRec(_hitbox, new Color(255, 0, 0, 120));
-                Raylib.DrawRectangleLinesEx(_hitbox, 2, Color.Red);
             }
         }
     }

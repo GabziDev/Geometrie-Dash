@@ -12,7 +12,7 @@ namespace test_raylibs.Obstactle
 
         public override void Draw()
         {
-            Raylib.DrawRectangle((int)Rect.X, (int)Rect.Y, 10000, 800, Color.White);
+            Raylib.DrawRectangle((int)Rect.X, (int)Rect.Y, 10000, 800, Program.bgColor);
             Raylib.DrawRectangle((int)Rect.X, (int)Rect.Y, 10000, 800, Color.Black);
         }
     }
