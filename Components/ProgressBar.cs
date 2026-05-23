@@ -1,6 +1,6 @@
 ﻿using Raylib_cs;
 
-namespace test_raylibs.Tool
+namespace test_raylibs.Components
 {
     internal class ProgressBar
     {
