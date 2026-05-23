@@ -5,8 +5,6 @@ namespace test_raylibs.Tool
 {
     internal class StartStats
     {
-        public StartStats() { }
-
         public void Draw()
         {
             Raylib.DrawText("Géometrie dash", 200, 400, 40, Color.Black);
